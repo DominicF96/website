@@ -8,7 +8,7 @@ export interface CaseStudy {
 const caseStudies = [
   {
     id: "anthony_king_website",
-    url: "https://dev.anthonyking.ca",
+    url: "https://anthonyking.ca",
     date: "2024-05-10",
     score: 8,
   },
@@ -29,12 +29,6 @@ const caseStudies = [
   //   date: "2024-01-23",
   //   score: 7,
   // },
-  {
-    id: "streamingfast_substreams_registry",
-    url: "https://substreams.dev",
-    date: "2024-02-18",
-    score: 7,
-  },
   {
     id: "pinax_app",
     url: "https://app.pinax.network",

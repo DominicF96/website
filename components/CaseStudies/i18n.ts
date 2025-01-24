@@ -20,7 +20,7 @@ const en = {
   back: "Retour",
   cases: {
     anthony_king_website: {
-      title: "Anthony King • Website (WIP)",
+      title: "Anthony King • Website",
       description:
         "Anthony King is a Mortgage Broker and financial planner in the Greater Montreal Area.",
     },
@@ -74,11 +74,11 @@ const en = {
       description:
         "Oreus Balance is my first fully designed project. It was planned to be the first Oreus product, a personal finance web application.",
     },
-    streamingfast_substreams_registry: {
-      title: "StreamingFast • Substreams Registry",
-      description:
-        "StreamingFast's Substreams Registry allows users to access an inventory of Substreams packages to extract data from the Blockchain in a modular way.",
-    },
+    // streamingfast_substreams_registry: {
+    //   title: "StreamingFast • Substreams Registry",
+    //   description:
+    //     "StreamingFast's Substreams Registry allows users to access an inventory of Substreams packages to extract data from the Blockchain in a modular way.",
+    // },
     fanslab_webapp: {
       title: "Fanslab • Web Platform",
       description:
@@ -95,7 +95,7 @@ const fr = {
   back: "Retour",
   cases: {
     anthony_king_website: {
-      title: "Anthony King • Site Web (En cours)",
+      title: "Anthony King • Site Web",
       description:
         "Anthony King est un courtier hypothécaire et planificateur financier dans la région du Grand Montréal.",
     },
@@ -149,11 +149,11 @@ const fr = {
       description:
         "Oreus Balance est mon premier projet entièrement conçu. Il était prévu pour être le premier produit Oreus, une application web de gestion de finances personnelles.",
     },
-    streamingfast_substreams_registry: {
-      title: "StreamingFast • Registre Substreams",
-      description:
-        "Le registre des Substreams de StreamingFast permet à ses utilisateurs d'accéder à un inventaire de paquets Substreams permettant d'extraire des données de la Blockchain de façon modulaire.",
-    },
+    // streamingfast_substreams_registry: {
+    //   title: "StreamingFast • Registre Substreams",
+    //   description:
+    //     "Le registre des Substreams de StreamingFast permet à ses utilisateurs d'accéder à un inventaire de paquets Substreams permettant d'extraire des données de la Blockchain de façon modulaire.",
+    // },
     fanslab_webapp: {
       title: "Fanslab • Plateforme Web",
       description:
