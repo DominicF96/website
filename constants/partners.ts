@@ -1,5 +1,15 @@
 const PARTNERS = [
   {
+    id: "scintillar",
+    name: "Scintillar",
+    url: "https://scintillar.com/",
+  },
+  {
+    id: "anthony-king",
+    name: "Anthony King",
+    url: "https://anthony-king.ca/",
+  },
+  {
     id: "cactusoft",
     name: "Cactusoft",
     url: "https://cactusoft.app/",
