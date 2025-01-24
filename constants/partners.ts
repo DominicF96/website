@@ -7,7 +7,7 @@ const PARTNERS = [
   {
     id: "anthony-king",
     name: "Anthony King",
-    url: "https://anthony-king.ca/",
+    url: "https://anthonyking.ca/",
   },
   {
     id: "cactusoft",
