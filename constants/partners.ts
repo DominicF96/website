@@ -25,6 +25,11 @@ const PARTNERS = [
     url: "https://eosnation.io/",
   },
   {
+    id: "monark",
+    name: "Monark",
+    url: "https://monark.io/",
+  },
+  {
     id: "fanslab",
     name: "Fanslab",
     url: "https://www.facebook.com/fanslab/",

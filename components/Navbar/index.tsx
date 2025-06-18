@@ -10,6 +10,7 @@ import i18n from "./i18n";
 import { CenteredContainer } from "../Container";
 import Socials from "../Socials";
 import injectLocaleIfBlog from "@/utils/links";
+import NavAvatar from "./NavAvatar";
 
 type Props = {
   locale: Locale;
@@ -57,9 +58,7 @@ function Navbar({ locale }: Props) {
               DF
             </AvatarFallback>
           </Avatar>
-          <span className="whitespace-nowrap" style={{ fontSize: "20px" }}>
-            Dominic Fournier
-          </span>
+          <NavAvatar />
         </Link>
         <Button
           variant="link"

@@ -19,6 +19,11 @@ const en = {
   wip: "Work in progress, check back soon!",
   back: "Retour",
   cases: {
+    monark_website: {
+      title: "Monark • Website",
+      description:
+        "Monark co-founder, we incubate the next generation of Web3 innovators, launching startups by students, recent graduates, and independent developers, aligned from day one with the ecosystems of our funding partners.",
+    },
     anthony_king_website: {
       title: "Anthony King • Website",
       description:
@@ -67,7 +72,7 @@ const en = {
     oreus_website: {
       title: "Oreus • Website",
       description:
-        "Oreus is a web product development consulting company that I co-founded in 2021.",
+        "Oreus is a web product development consulting company that I co-founded in 2021 (Closed).",
     },
     oreus_balance_website: {
       title: "Oreus • Balance",
@@ -94,6 +99,11 @@ const fr = {
   wip: "En cours de rédaction, revenez bientôt!",
   back: "Retour",
   cases: {
+    monark_website: {
+      title: "Monark • Site Web",
+      description:
+        "Co-fondation de Monark, nous incubons la prochaine génération d'innovateurs Web3, lançant des startups par des étudiants, de jeunes diplômés et des développeurs indépendants, alignés dès le premier jour avec les écosystèmes de nos partenaires financiers.",
+    },
     anthony_king_website: {
       title: "Anthony King • Site Web",
       description:
@@ -142,7 +152,7 @@ const fr = {
     oreus_website: {
       title: "Oreus • Site Web",
       description:
-        "Oreus est une entreprise de services-conseils en développement de produits web que j'ai co-fondé en 2021.",
+        "Oreus est une entreprise de services-conseils en développement de produits web que j'ai co-fondé en 2021 (Fermée).",
     },
     oreus_balance_website: {
       title: "Oreus • Balance",

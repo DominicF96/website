@@ -7,6 +7,12 @@ export interface CaseStudy {
 
 const caseStudies = [
   {
+    id: "monark_website",
+    url: "https://monark.io",
+    date: "2025-02-28",
+    score: 8,
+  },
+  {
     id: "anthony_king_website",
     url: "https://anthonyking.ca",
     date: "2024-05-10",
@@ -33,18 +39,18 @@ const caseStudies = [
     id: "pinax_app",
     url: "https://app.pinax.network",
     date: "2023-11-18",
+    score: 7,
+  },
+  {
+    id: "pinax_website",
+    url: "https://pinax.network",
+    date: "2023-08-01",
     score: 8,
   },
   {
     id: "eosnation_ens",
     url: "https://eosnameservice.io",
     date: "2023-05-01",
-    score: 6,
-  },
-  {
-    id: "pinax_website",
-    url: "https://pinax.network",
-    date: "2023-08-01",
     score: 6,
   },
   // {
@@ -60,7 +66,7 @@ const caseStudies = [
   },
   {
     id: "oreus_website",
-    url: "https://oreus.ca",
+    // url: "https://oreus.ca",
     date: "2022-11-01",
     score: 7,
   },
