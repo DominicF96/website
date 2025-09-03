@@ -72,13 +72,13 @@ const caseStudies = [
   },
   {
     id: "oreus_balance_website",
-    url: "https://balance.oreus.dominicfournier.com",
+    // url: "https://balance.oreus.dominicfournier.com",
     date: "2021-07-01",
     score: 6,
   },
   {
     id: "fanslab_webapp",
-    url: "https://fanslab.com",
+    url: "https://www.youtube.com/watch?v=J7fdJnQfusU",
     date: "2020-07-20",
     score: 6,
   },

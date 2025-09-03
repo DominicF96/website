@@ -77,7 +77,7 @@ const en = {
     oreus_balance_website: {
       title: "Oreus • Balance",
       description:
-        "Oreus Balance is my first fully designed project. It was planned to be the first Oreus product, a personal finance web application.",
+        "Oreus Balance is my first fully designed project. It was planned to be the first Oreus product, a personal finance web application (Closed).",
     },
     // streamingfast_substreams_registry: {
     //   title: "StreamingFast • Substreams Registry",
@@ -87,7 +87,7 @@ const en = {
     fanslab_webapp: {
       title: "Fanslab • Web Platform",
       description:
-        "Fanslab offers a community management platform for networking events. I built the first version of the web application's Frontend in less than a month.",
+        "Fanslab offers a community management platform for networking events. I built the first version of the web application's Frontend in less than a month (Closed).",
     },
   },
 };
@@ -157,7 +157,7 @@ const fr = {
     oreus_balance_website: {
       title: "Oreus • Balance",
       description:
-        "Oreus Balance est mon premier projet entièrement conçu. Il était prévu pour être le premier produit Oreus, une application web de gestion de finances personnelles.",
+        "Oreus Balance est mon premier projet entièrement conçu. Il était prévu pour être le premier produit Oreus, une application web de gestion de finances personnelles (Fermé).",
     },
     // streamingfast_substreams_registry: {
     //   title: "StreamingFast • Registre Substreams",
@@ -167,7 +167,7 @@ const fr = {
     fanslab_webapp: {
       title: "Fanslab • Plateforme Web",
       description:
-        "Fanslab offre une plateforme de gestion de communautés pour les événements de réseautage. J'ai bâti la première version du Frontend de l'application web en moins d'un mois.",
+        "Fanslab offre une plateforme de gestion de communautés pour les événements de réseautage. J'ai bâti la première version du Frontend de l'application web en moins d'un mois (Fermé).",
     },
   },
 };
