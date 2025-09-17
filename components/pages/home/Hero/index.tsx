@@ -20,7 +20,7 @@ function Hero({ locale }: Props) {
   return (
     <>
       <CenteredContainer>
-        <div className="relative z-50 pb-32">
+        <div className="relative z-50 md:pb-32">
           <Lead>
             {t.flavor.part_1}&nbsp;
             <span className="font-bold">{t.flavor.part_2}</span>.
@@ -41,9 +41,9 @@ function Hero({ locale }: Props) {
             </Button>
           </div>
         </div>
-        <div className="md:pr-24">
+        <div className="lg:pr-24 pt-8">
           <Slideshow
-            className="hidden md:block relative z-0"
+            className="relative z-0"
             items={PARTNERS.map((partner) => {
               return {
                 name: partner.name,
@@ -56,7 +56,7 @@ function Hero({ locale }: Props) {
         </div>
         <ScrollCTA
           locale={locale}
-          className="absolute -bottom-20 md:bottom-3 right-0 z-40"
+          className="absolute -bottom-20 -top-32 lg:top-auto lg:bottom-3 left-40 lg:left-auto lg:right-0 z-40"
         />
       </CenteredContainer>
     </>
