@@ -1,0 +1,7 @@
+.rotate-icon {
+    &:hover {
+        .card-icon {
+            transform: rotate(-25deg) scale(1.3);
+        }
+    }
+}

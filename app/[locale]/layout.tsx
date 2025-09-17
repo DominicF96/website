@@ -1,10 +1,12 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import { Locale } from "@/i18n.config";
-import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import Image from "next/image";
-import ContactForm from "@/components/ContactForm";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Newsletter from "@/components/layout/Newsletter";
+import ContactForm from "@/components/layout/ContactForm";
+import { Locale } from "@/i18n.config";
+import SlidingBanner from "@/components/pages/home/SlidingBanner";
+import Glossary from "@/components/pages/home/Glossary/Glossary";
 
 type Props = {
   params: {
@@ -28,6 +30,8 @@ function LocalizedLayout({ params, children }: Props) {
           style={{ animationDuration: "30s" }}
         />
         {children}
+        <SlidingBanner locale={locale} className="mt-32 md:mt-48" />
+        <Glossary />
         <Newsletter locale={locale} />
         <ContactForm locale={locale} />
         <Footer locale={locale} />

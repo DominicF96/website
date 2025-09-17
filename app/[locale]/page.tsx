@@ -1,11 +1,10 @@
-import Hero from "@/components/Hero";
-import SlidingBanner from "@/components/SlidingBanner";
+import Hero from "@/components/pages/home/Hero";
+import ExtendedBio from "@/components/pages/home/ExtendedBio";
+import CardShortcuts from "@/components/pages/home/CardShortcuts";
+import { PageContainer } from "@/components/Container";
 import { Locale } from "@/i18n.config";
 import metadata from "./metadata";
-import CaseStudies from "@/components/CaseStudies";
-import { PageContainer } from "@/components/Container";
-import ExtendedBio from "@/components/ExtendedBio";
-import Glossary from "@/components/Glossary/Glossary";
+import Image from "next/image";
 
 type HomePageProps = {
   params: {
@@ -18,11 +17,11 @@ export default function HomePage({ params }: HomePageProps) {
   const { locale } = params;
   return (
     <PageContainer>
+      <Image src="/images/dominic_fournier.webp" height={256} width={256} alt="Dominic Fournier" className="block lg:hidden px-4 py-8 relative z-10" />
+      <Image src="/images/dominic_fournier.webp" height={500} width={1500} alt="Dominic Fournier" className="hidden lg:block w-[500px] absolute top-60 right-32" />
       <Hero locale={locale} />
       <ExtendedBio locale={locale} />
-      <CaseStudies locale={locale} />
-      <SlidingBanner locale={locale} className="mt-32 md:mt-48" />
-      <Glossary />
+      <CardShortcuts locale={locale} />
     </PageContainer>
   );
 }

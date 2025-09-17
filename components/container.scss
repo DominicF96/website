@@ -1,0 +1,13 @@
+.fade-out-linear {
+    -webkit-mask-image: -webkit-gradient(linear, left 30%, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    opacity: 20%
+}
+
+.fade-out-radial {
+    object-fit: cover;
+    /* Ensures the image covers the container */
+    mask-image: radial-gradient(circle at center, black 50%, transparent 70%);
+    mask-mode: alpha;
+    /* Ensures the transparency of the gradient is applied */
+    opacity: 75%
+}
