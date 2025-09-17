@@ -23,7 +23,7 @@ function Brands({ locale }: Props) {
                 <BrandSquare src="/vectors/brands/scintillar" alt="Scintillar Logo" className="md:invert lg:invert-0" />
                 <BrandSquare src="/vectors/brands/oreus" alt="Oreus Logo" />
                 <BrandSquare src="/vectors/brands/quickdocs" alt="QuickDocs Logo" />
-                <BrandSquare src="/vectors/brands/spyglass" alt="Spyglass Logo" />
+                <BrandSquare src="/vectors/brands/spyglass" alt="Spyglass Logo" className="md:invert lg:invert-0"/>
             </div>
         </div>
     );
