@@ -1,5 +1,6 @@
 export interface I18n {
   contact: string;
+  description: string;
   firstname: {
     label: string;
     placeholder: string;
@@ -30,13 +31,7 @@ export interface I18n {
     label: string;
     placeholder: string;
   };
-  newsletter: {
-    label: string;
-    tips: {
-      success: string;
-      error: string;
-    };
-  };
+  email_bypass: string;
   errors: {
     min_2_chars: string;
     min_5_chars: string;
@@ -51,7 +46,8 @@ export interface I18n {
 }
 
 export const en: I18n = {
-  contact: "Say hello!",
+  contact: "Let's Talk!",
+  description: "I'm open for business!",
   firstname: {
     label: "First Name",
     placeholder: "John",
@@ -82,14 +78,7 @@ export const en: I18n = {
     label: "Your message",
     placeholder: "The north remembers!",
   },
-  newsletter: {
-    label: "Subscribe to the newsletter",
-    tips: {
-      success: "You are now subscribed to our newsletter!",
-      error:
-        "An error occurred while subscribing to the newsletter. Please try again later.",
-    },
-  },
+  email_bypass: "You can also contact me directly:",
   errors: {
     min_2_chars: "Must be at least 2 characters",
     min_5_chars: "Must be at least 5 characters",
@@ -106,7 +95,8 @@ export const en: I18n = {
 };
 
 export const fr: I18n = {
-  contact: "Un petit mot?",
+  contact: "On jase!",
+  description: "Ouvert aux projets et collaborations!",
   firstname: {
     label: "Prénom",
     placeholder: "John",
@@ -137,14 +127,7 @@ export const fr: I18n = {
     label: "Votre message",
     placeholder: "Le nord se souvient!",
   },
-  newsletter: {
-    label: "S'inscrire à l'infolettre",
-    tips: {
-      success: "Vous êtes maintenant inscrit à notre infolettre!",
-      error:
-        "Une erreur s'est produite lors de l'inscription à l'infolettre. Veuillez réessayer plus tard.",
-    },
-  },
+  email_bypass: "Vous pouvez également me contacter directement:",
   errors: {
     min_2_chars: "Doit contenir au moins 2 caractères",
     min_5_chars: "Doit contenir au moins 5 caractères",

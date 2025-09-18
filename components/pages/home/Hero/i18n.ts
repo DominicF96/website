@@ -26,7 +26,7 @@ const en = {
     part_2: "Product Designer",
   },
   description: (years: number | string) =>
-    `With more than ${years} years of experience in frontend, UI/UX, and product design, I build intuitive, high-performing dashboards and websites, bridging project management, design and development seamlessly.`,
+    `With over ${years} years of experience in Frontend development, management, and product design, I help teams turn complex challenges into intuitive, high-performing digital products.`,
   cta: {
     primary: "Contact me",
     secondary: "Projects",
@@ -44,7 +44,7 @@ const fr = {
     part_2: "Designer Produit",
   },
   description: (years: number | string) =>
-    `Avec plus de ${years} ans d'expérience en frontend, UI/UX et design produit, je crée des tableaux de bord et sites web intuitifs et performants, combinant efficacement gestion de projet, design et développement.`,
+    `Avec plus de ${years} années d'expérience en développement Frontend, gestion et design produit, j'aide les équipes à transformer des défis complexes en produits numériques intuitifs et performants.`,
   cta: {
     primary: "Contactez-moi",
     secondary: "Projets",

@@ -23,7 +23,7 @@ import {
 import * as i18n from "./i18n";
 import { Locale } from "@/i18n.config";
 import { Textarea } from "../../ui/textarea";
-import { H1, Small } from "../../Typography";
+import { H1, Lead, P, Small } from "../../Typography";
 import { CheckIcon, LoaderIcon, XCircleIcon } from "lucide-react";
 import { CenteredContainer } from "../../Container";
 import { toast } from "sonner";
@@ -163,12 +163,15 @@ function ContactForm({ locale }: Props) {
   return (
     <CenteredContainer className=" overflow-hidden">
       <div className="relative flex flex-col md:flex-row justify-evenly gap-8 z-10">
-        <H1
-          id="contact"
-          className="!text-[128px] !line-clamp-none overflow-visible h-fit max-w-[50%] text-primary"
-        >
-          {t.contact}
-        </H1>
+        <div>
+          <H1
+            id="contact"
+            className="!text-[128px] !line-clamp-none overflow-visible h-fit max-w-[50%] text-primary"
+          >
+            {t.contact}
+          </H1>
+          <Lead>{t.description}</Lead>
+        </div>
         <Form {...form}>
           <form
             onKeyDown={handleKeyPress}
@@ -302,7 +305,7 @@ function ContactForm({ locale }: Props) {
               <div>
                 <Small className="text-primary font-bold flex items-center">
                   <CheckIcon height={18} width={18} className="mr-2" />
-                  &nbsp;{t.newsletter.tips.success}
+                  &nbsp;{t.submit_successful}
                 </Small>
               </div>
             ) : null}
@@ -310,7 +313,7 @@ function ContactForm({ locale }: Props) {
               <div>
                 <Small className="text-destructive font-bold flex items-center">
                   <XCircleIcon height={18} width={18} className="mr-2" />
-                  &nbsp;{t.newsletter.tips.error}
+                  &nbsp;{t.errors.submit}
                 </Small>
               </div>
             ) : null}
@@ -320,6 +323,9 @@ function ContactForm({ locale }: Props) {
                 <LoaderIcon height={18} width={18} className="animate-spin" />
               ) : null}
             </Button>
+            <div className="mt-8 text-muted-foreground">
+              <Small >{t.email_bypass}&nbsp;<a className="text-primary" href="mailto:me@dominicfournier.com">me@dominicfournier.com</a></Small>
+            </div>
           </form>
         </Form>
       </div>

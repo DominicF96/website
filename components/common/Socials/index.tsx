@@ -52,13 +52,13 @@ function Socials({ className, locale }: Props) {
           aria-label="CV / Resume"
           asChild
         >
-          {/* <Link
+          <Link
             href={`/${locale}/files/Dominic_Fournier.pdf`}
             download={`Dominic_Fournier_${locale}.pdf`}
             target="_blank"
           >
             <FileTextIcon color="#5cd6ad" height={24} width={24} />
-          </Link> */}
+          </Link>
         </Button>
       </li>
     </ul>

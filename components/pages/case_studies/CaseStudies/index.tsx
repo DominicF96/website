@@ -1,22 +1,22 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import enCaseStudies from "@/content/en/case_studies/index";
 import frCaseStudies from "@/content/fr/case_studies/index";
 import i18n from "./i18n";
 import { DatedCaseStudyMetadata } from "@/types/case_study.types";
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Locale } from "@/i18n.config";
 import CaseStudyRow from "./CaseStudyRow";
 import { CenteredContainer } from "@/components/Container";
 import { H1, Muted, P } from "@/components/Typography";
-// import { Label } from "@/components/ui/label";
+import { Label } from "@/components/ui/label";
 
 interface CaseStudyListProps {
   locale: Locale;
@@ -31,7 +31,7 @@ const CaseStudyList: React.FC<CaseStudyListProps> = ({ locale }) => {
   const t = i18n[locale];
   const [search, setSearch] = useState("");
   const [caseStudies, setCaseStudies] = useState<DatedCaseStudyMetadata[]>([]);
-  const [sortMode, setSortMode] = useState<'title' | 'score' | 'date'>("score");
+  const [sortMode, setSortMode] = useState<'title' | 'score' | 'date'>("date");
 
   useEffect(() => {
     const caseStudyData = caseStudyDataMap[locale];
@@ -56,8 +56,8 @@ const CaseStudyList: React.FC<CaseStudyListProps> = ({ locale }) => {
       <CenteredContainer className="pb-40 mt-4">
         <H1>{t.title}</H1>
         <Muted className="max-w-[450px] mb-8">{t.description}</Muted>
-        {/* <div className="flex flex-col sm:flex-row gap-4 mb-2">
-          <div className="flex flex-1 flex-col gap-2">
+        <div className="flex flex-col sm:flex-row gap-4 h-0">
+          {/* <div className="flex flex-1 flex-col gap-2">
             <Label className="ml-4">{t.search.label}</Label>
             <Input
               placeholder={t.search.placeholder}
@@ -65,7 +65,7 @@ const CaseStudyList: React.FC<CaseStudyListProps> = ({ locale }) => {
               onChange={(e) => setSearch(e.target.value)}
               className="flex-1"
             />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-2">
             <Label className="ml-4">{t.sort.label}</Label>
             <Select value={sortMode} onValueChange={v => setSortMode(v as 'title' | 'score' | 'date')}>
@@ -73,13 +73,13 @@ const CaseStudyList: React.FC<CaseStudyListProps> = ({ locale }) => {
                 <SelectValue>{t.sort[sortMode]}</SelectValue>
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="score">{t.sort.by}&nbsp;{t.sort.score}</SelectItem>
                 <SelectItem value="date">{t.sort.by}&nbsp;{t.sort.date}</SelectItem>
                 <SelectItem value="title">{t.sort.by}&nbsp;{t.sort.title}</SelectItem>
+                <SelectItem value="score">{t.sort.by}&nbsp;{t.sort.score}</SelectItem>
               </SelectContent>
             </Select>
           </div>
-        </div> */}
+        </div>
       </CenteredContainer>
       {filteredCaseStudies.length > 0 ? (
         filteredCaseStudies.map((caseStudy, index) => {

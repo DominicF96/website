@@ -8,7 +8,7 @@ export interface I18n {
 
 const en: I18n = {
     title: "Articles / Devlogs",
-    description: "I write about product strategy, User Experience, Design and Frontend Development and anything else that crosses my mind.",
+    description: "Articles about Frontend development, product strategy, design, and anything else that crosses my mind!",
     search: {
         not_found: "No article found.",
     }
@@ -16,7 +16,7 @@ const en: I18n = {
 
 const fr: I18n = {
     title: "Articles / Devlogs",
-    description: "J'écris sur la stratégie de produit, l'expérience utilisateur, le design et le développement frontend et tout ce qui me passe par la tête.",
+    description: "Articles sur le développement Frontend, la stratégie de produit, le design et et tout ce qui me passe par la tête!",
     search: {
         not_found: "Aucun article trouvé."
     }

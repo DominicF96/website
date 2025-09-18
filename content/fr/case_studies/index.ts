@@ -41,7 +41,7 @@ const data: DatedCaseStudyMetadata[] = [
     "date": "2020-07-20T00:00:00.000Z",
     "role": "Développeur principal",
     "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Web de Fanslab.",
-    "url": "https://www.youtube.com/watch?v=J7fdJnQfusU",
+    "url": "https://drive.google.com/file/d/1LxtnU_kqo1KnYF4QZSPGDbF4Hqd4Uo0O/view?usp=drive_link",
     "score": 6,
     "hash": "5db892503f589c86e8f7d82e4105123ac10dbabd5c239994d05d3534d409d841",
     "last_updated": "2025-09-18"

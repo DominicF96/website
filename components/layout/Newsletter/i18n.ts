@@ -12,7 +12,7 @@ export interface I18n {
 const en = {
   title: "Get Notified",
   description:
-    "Interested in what I do? Subscribe to my newsletter to receive a monthly summary of my recent work.",
+    "Interested in what I do? Subscribe to my newsletter to receive updates on my latest work.",
   placeholder: "Email",
   action: "Subscribe",
   success: "You are now subscribed to my newsletter!",
@@ -26,7 +26,7 @@ const en = {
 const fr = {
   title: "Restez informé",
   description:
-    "Vous êtes intéressé par ce que je fais? Abonnez-vous à mon infolettre pour recevoir un résumé mensuel de mes travaux récents.",
+    "Vous êtes intéressé par ce que je fais? Abonnez-vous à mon infolettre pour recevoir des nouvelles de mes travaux récents.",
   placeholder: "Courriel",
   action: "S'abonner",
   success: "Vous êtes maintenant abonné à mon infolettre!",
@@ -37,5 +37,5 @@ const fr = {
   },
 };
 
-const locales = { en, fr }; 
+const locales = { en, fr };
 export default locales;

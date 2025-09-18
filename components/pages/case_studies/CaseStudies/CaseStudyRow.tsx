@@ -102,7 +102,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
       >
         <CenteredContainer className="relative z-10">
           <H3>{caseData.title}</H3>
-          <Muted>
+          <Muted className="mt-2 flex flex-col gap-2">
             <span>
               <CalendarIcon className="inline" size={16} />&nbsp;
               <time>
@@ -111,7 +111,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
                 }))}
               </time>
             </span>
-            <span>&nbsp;•&nbsp;<UserRoundCogIcon className="inline" size={16} />&nbsp;{caseData.role}</span>
+            <span><UserRoundCogIcon className="inline" size={16} />&nbsp;{caseData.role}</span>
           </Muted>
           <div
             style={

@@ -16,16 +16,16 @@ function ExtendedBio({ locale }: Props) {
           <Muted>{t.frontend.description}</Muted>
         </div>
         <div>
-          <H3>{t.ux.title}</H3>
-          <Muted>{t.ux.description}</Muted>
-        </div>
-        <div>
           <H3>{t.project_management.title}</H3>
           <Muted>{t.project_management.description}</Muted>
         </div>
         <div>
-          <H3>{t.innovation.title}</H3>
-          <Muted>{t.innovation.description}</Muted>
+          <H3>{t.digital_strategy.title}</H3>
+          <Muted>{t.digital_strategy.description}</Muted>
+        </div>
+        <div>
+          <H3>{t.ux.title}</H3>
+          <Muted>{t.ux.description}</Muted>
         </div>
       </div>
     </CenteredContainer>

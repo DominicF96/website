@@ -5,7 +5,7 @@ export interface I18n {
 
 const en: I18n = {
     title: "Brands",
-    description: "A showcase of brands I've had the pleasure to design, highlighting their identity and visual style."
+    description: "Showcase of brands I've had the pleasure to design, highlighting their identity and visual style."
 };
 
 const fr: I18n = {
