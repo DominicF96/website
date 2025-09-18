@@ -332,10 +332,6 @@ export const GLOSSARY = [
     score: 0.4,
   },
   {
-    name: "React Native",
-    score: 0.4,
-  },
-  {
     name: "Rollup",
     score: 0.4,
   },

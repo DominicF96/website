@@ -12,6 +12,7 @@ import Socials from "../../common/Socials";
 import injectLocaleIfBlog from "@/utils/links";
 import NavAvatar from "./NavAvatar";
 import { usePathname } from 'next/navigation'
+import { NavLink } from "@/components/common/NavLink";
 
 type Props = {
   locale: Locale;
@@ -45,13 +46,13 @@ function Navbar({ locale }: Props) {
         }`}
     >
       <CenteredContainer className="flex items-center">
-        <Link href="/" className="flex items-center">
+        <NavLink href="/" className="flex items-center">
           <Avatar className="inline-block mr-4 h-11 w-11">
-            <AvatarImage
+            {/* <AvatarImage
               src="/images/dominic_fournier_avatar.webp"
               alt="@DominicF96"
               className="h-[48px] w-[48px]"
-            />
+            /> */}
             <AvatarFallback
               className="bg-primary text-primary-foreground font-bold h-[48px] w-[48px]"
             >
@@ -59,7 +60,7 @@ function Navbar({ locale }: Props) {
             </AvatarFallback>
           </Avatar>
           <NavAvatar />
-        </Link>
+        </NavLink>
         <Button
           variant="link"
           className="md:hidden ml-auto pr-0 hover:!pl-4 hover:!pr-4"
@@ -98,7 +99,7 @@ function NavbarMobileDrawer({
   const pathname = usePathname()
 
   function isLinkActive(url: string, locale: Locale) {
-    if(url === "/") {
+    if (url === "/") {
       url = "";
     }
     return "/" + locale + url === pathname
@@ -121,9 +122,9 @@ function NavbarMobileDrawer({
                 onClick={onClose}
                 asChild
               >
-                <Link href={injectLocaleIfBlog(link.url, locale)}>
+                <NavLink href={injectLocaleIfBlog(link.url, locale)}>
                   {t[link.key as keyof typeof t]}
-                </Link>
+                </NavLink>
               </Button>
             </li>
           );
@@ -140,9 +141,9 @@ function NavbarMobileDrawer({
             asChild
             onClick={onClose}
           >
-            <Link href="#contact" className="w-full">
+            <NavLink href="#contact" className="w-full">
               {t.contact}
-            </Link>
+            </NavLink>
           </Button>
         </li>
       </ul>
@@ -159,7 +160,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
   const pathname = usePathname()
 
   function isLinkActive(url: string, locale: Locale) {
-    if(url === "/") {
+    if (url === "/") {
       url = "";
     }
     return "/" + locale + url === pathname
@@ -177,9 +178,9 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
                   asChild
                   className="hover:px-4"
                 >
-                  <Link href={injectLocaleIfBlog(link.url, locale)}>
+                  <NavLink href={injectLocaleIfBlog(link.url, locale)}>
                     {t[link.key as keyof typeof t]}
-                  </Link>
+                  </NavLink>
                 </Button>
               </li>
             ))}
@@ -192,7 +193,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
             </li>
             <li>
               <Button className="ml-4" asChild>
-                <Link href="#contact">{t.contact}</Link>
+                <NavLink href="#contact">{t.contact}</NavLink>
               </Button>
             </li>
           </ul>

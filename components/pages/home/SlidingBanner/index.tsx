@@ -25,17 +25,17 @@ function SlidingBanner({ locale, className }: Props) {
       <div className="max-w-full overflow-hidden w-full font-bold whitespace-nowrap text-4xl md:text-8xl">
         <div className="bg-background border border-l-0 border-r-0 border-primary text-primary w-full py-8">
           <CenteredContainer className="sliding-text-ltr">
-            {repeatArrayNTimes(t.row1, 100).join("   •   ")}
+            {repeatArrayNTimes(t.row1, 100).join("   •   ").toLocaleUpperCase()}
           </CenteredContainer>
         </div>
         <div className="bg-primary text-background w-full py-8">
           <CenteredContainer className="sliding-text-rtl max-w-[1024px]">
-            {repeatArrayNTimes(t.row2, 100).join("   •   ")}
+            {repeatArrayNTimes(t.row2, 100).join("   •   ").toLocaleUpperCase()}
           </CenteredContainer>
         </div>
         <div className="bg-background border border-l-0 border-r-0 border-primary text-primary w-full py-8">
           <CenteredContainer className="sliding-text-ltr max-w-[1024px]">
-            {repeatArrayNTimes(t.row3, 100).join("   •   ")}
+            {repeatArrayNTimes(t.row3, 100).join("   •   ").toLocaleUpperCase()}
           </CenteredContainer>
         </div>
       </div>

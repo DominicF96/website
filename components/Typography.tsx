@@ -11,7 +11,7 @@ export const H1 = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <h1
-      className={`scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-wide ${
+      className={`scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-wide uppercase ${
         props.className || ""
       }`}
       style={{ lineHeight: "120%" }}
@@ -24,7 +24,7 @@ export const H2 = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <h2
-      className={`scroll-m-20 text-4xl md:text-5xl font-semibold tracking-tight transition-colors ${
+      className={`scroll-m-20 text-4xl md:text-5xl font-semibold tracking-tight transition-colors uppercase ${
         props.className || ""
       }`}
       {...other}
@@ -36,7 +36,7 @@ export const H3 = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <h3
-      className={`scroll-m-20 text-2xl font-semibold tracking-tight ${
+      className={`scroll-m-20 text-2xl font-semibold tracking-tight uppercase ${
         props.className || ""
       }`}
       {...props}
@@ -47,7 +47,7 @@ export const H4 = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <h4
-      className={`scroll-m-20 text-xl font-semibold tracking-tight ${
+      className={`scroll-m-20 text-xl font-semibold tracking-tight uppercase ${
         props.className || ""
       }`}
       {...props}
@@ -140,7 +140,7 @@ export const Muted = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <div
-      className={`text-sm text-muted-foreground ${props.className || ""}`}
+      className={`text-md text-muted-foreground ${props.className || ""}`}
       {...other}
     />
   );

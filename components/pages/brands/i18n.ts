@@ -1,13 +1,16 @@
 export interface I18n {
-  title: string;
+    title: string;
+    description: string;
 }
 
-const en = {
-  title: "Brands",
+const en: I18n = {
+    title: "Brands",
+    description: "A showcase of brands I've had the pleasure to design, highlighting their identity and visual style."
 };
 
-const fr = {
-  title: "Marques",
+const fr: I18n = {
+    title: "Marques",
+    description: "Vitrine des marques pour lesquelles j'ai eu le plaisir de créer l'identité et le style visuel."
 };
 
 export default { en, fr };

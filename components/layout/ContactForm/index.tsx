@@ -35,11 +35,11 @@ type Props = {
 function ContactForm({ locale }: Props) {
   const t = i18n[locale];
 
-  const [isLoading, setLoading] = useState<boolean>(false);
-  const [sentMessage, setSentMessage] = useState<boolean>(false);
+  const [isLoading, setLoading] = useState(false);
+  const [sentMessage, setSentMessage] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [isLoadingSubscribe, setLoadingSubscribe] = useState<boolean>(false);
+  const [isLoadingSubscribe, setLoadingSubscribe] = useState(false);
   const [subscribeRes, setSubscribeRes] = useState<boolean | undefined>(
     undefined
   );
@@ -78,9 +78,6 @@ function ContactForm({ locale }: Props) {
   function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
     setSentMessage(false);
-    // if (values.newsletter) {
-    //   subscribe(values);
-    // }
 
     fetch("/api/contact", {
       method: "POST",
@@ -159,7 +156,7 @@ function ContactForm({ locale }: Props) {
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.key === "Enter") {
-      form.handleSubmit(onSubmit)(); // This triggers the form submission programmatically
+      form.handleSubmit(onSubmit)();
     }
   };
 
@@ -247,7 +244,6 @@ function ContactForm({ locale }: Props) {
                   <FormLabel>{t.reason_select.label}</FormLabel>
                   <FormControl>
                     <Select
-                      {...field}
                       onValueChange={field.onChange}
                       defaultValue={field.value}
                     >
@@ -286,24 +282,6 @@ function ContactForm({ locale }: Props) {
                 </FormItem>
               )}
             />
-            {/* <FormField
-              control={form.control}
-              name="newsletter"
-              render={({ field }) => (
-                <FormItem className="flex items-center gap-2">
-                  <FormControl>
-                    <Switch
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <FormLabel className="!mt-0 w-fit cursor-pointer">
-                    {t.newsletter.label}
-                  </FormLabel>
-                  <FormMessage />
-                </FormItem>
-              )}
-            /> */}
             {error ? (
               <div>
                 <Small className="text-destructive font-bold flex items-center">

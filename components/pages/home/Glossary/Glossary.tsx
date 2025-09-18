@@ -14,18 +14,18 @@ function Glossary({}: Props) {
   });
 
   return (
-    <div className="flex flex-row justify-between flex-wrap gap-8 gap-y-4 mt-4 mix-blend-multiply max-h-[400px] overflow-hidden py-1">
+    <div className="flex flex-row justify-between flex-wrap gap-8 gap-y-4 mt-4 mix-blend-multiply max-h-[400px] overflow-hidden py-1 text-muted-foreground">
       {sortedGlossary.map((keyword) => (
         <div
           key={`keyword_${keyword.name}`}
           className="inline-block text-sm"
           style={{
-            opacity: keyword.score * 0.4,
+            opacity: keyword.score * 0.6,
             fontWeight: keyword.score > 0.7 ? "bold" : "normal",
             fontSize: `${0.8 + keyword.score * 1}rem`,
           }}
         >
-          {keyword.name}
+          {keyword.name.toLocaleUpperCase()}
         </div>
       ))}
     </div>

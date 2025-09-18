@@ -1,7 +1,7 @@
 export interface I18n {
   title: string;
   project_types: {
-    web: string;
+    case_studies: string;
     brands: string;
     articles: string;
     games: string;
@@ -12,7 +12,7 @@ export interface I18n {
 const en = {
   title: "My Work",
   project_types: {
-    web: "Web",
+    case_studies: "Case Studies",
     brands: "Brands",
     articles: "Articles / Devlogs",
     games: "Games"
@@ -23,7 +23,7 @@ const en = {
 const fr = {
   title: "Réalisations",
   project_types: {
-    web: "Web",
+    case_studies: "Études de cas",
     brands: "Marques",
     articles: "Articles / Devlogs",
     games: "Jeux"

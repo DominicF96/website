@@ -23,7 +23,7 @@ function PageContainer({ children, className }: ContainerProps) {
   return (
     <main className={`relative pt-24 md:pt-36 ${className || ""}`}>
       <LoaderPage />
-      <Image src="/images/hero-bg.webp" height={500} width={1500} alt="" className="w-full absolute top-0 fade-out-linear" />
+      <Image priority src="/images/hero-bg.webp" height={500} width={1500} alt="" className="w-full absolute top-0 fade-out-linear" />
       {children}
     </main>
   );

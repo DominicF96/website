@@ -30,7 +30,7 @@ function LocalizedLayout({ params, children }: Props) {
           style={{ animationDuration: "30s" }}
         />
         {children}
-        <SlidingBanner locale={locale} className="mt-32 md:mt-48" />
+        <SlidingBanner locale={locale} className="-mt-[1px]" />
         <Glossary />
         <Newsletter locale={locale} />
         <ContactForm locale={locale} />

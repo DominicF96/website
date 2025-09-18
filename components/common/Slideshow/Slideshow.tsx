@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import Link from "../../Link";
 import "./Slideshow.scss";
+import Link from "next/link";
 
 type Props = {
   items: Array<{

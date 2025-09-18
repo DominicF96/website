@@ -1,8 +1,9 @@
-import { Poppins } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import ClientProviders from "@/components/ClientProviders";
 import "./globals.css";
+import { ViewTransitions } from "next-view-transitions";
 
-const poppins = Poppins({
+const jetbrainsMono = JetBrains_Mono({
   weight: "400",
   subsets: ["latin"],
 });
@@ -13,12 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body>
-        <ClientProviders>{children}</ClientProviders>
-        <div className="hidden md:block">
-        </div>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className={jetbrainsMono.className}>
+        <body>
+          <ClientProviders>{children}</ClientProviders>
+          <div className="hidden md:block">
+          </div>
+        </body>
+      </html>
+    </ViewTransitions>
+
   );
 }

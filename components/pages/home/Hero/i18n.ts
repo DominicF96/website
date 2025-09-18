@@ -22,8 +22,8 @@ const en = {
     part_2: "Dominic",
   },
   title: {
-    part_1: "Product Designer,",
-    part_2: "Frontend Developer",
+    part_1: "Frontend Developer,",
+    part_2: "Product Designer",
   },
   description: (years: number | string) =>
     `With more than ${years} years of experience in frontend, UI/UX, and product design, I build intuitive, high-performing dashboards and websites, bridging project management, design and development seamlessly.`,
@@ -40,8 +40,8 @@ const fr = {
     part_2: "Dominic",
   },
   title: {
-    part_1: "Designer Produit,",
-    part_2: "Développeur Frontend",
+    part_1: "Développeur Frontend,",
+    part_2: "Designer Produit",
   },
   description: (years: number | string) =>
     `Avec plus de ${years} ans d'expérience en frontend, UI/UX et design produit, je crée des tableaux de bord et sites web intuitifs et performants, combinant efficacement gestion de projet, design et développement.`,

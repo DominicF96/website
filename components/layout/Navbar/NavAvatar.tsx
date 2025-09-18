@@ -66,7 +66,7 @@ export default function NavAvatar() {
     <>
       <span
         className="whitespace-nowrap transition-all duration-500 "
-        style={{ fontSize: "20px", display: "inline-block", width: "170px" }}
+        style={{ display: "inline-block", width: "170px" }}
         onMouseEnter={() => {
           if (!animating && displayName !== hoverName) animateToHover();
         }}

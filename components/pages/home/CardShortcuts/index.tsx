@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "../../../ui/card";
 import { Locale } from "@/i18n.config";
 import i18n from "./i18n";
 import { H2 } from "../../../Typography";
-import { ChevronRightIcon, GamepadIcon, Globe2Icon, NewspaperIcon, SplinePointerIcon } from "lucide-react";
-import Link from "../../../Link";
+import { ChevronRightIcon, ClipboardIcon, GamepadIcon, NewspaperIcon, SplinePointerIcon } from "lucide-react";
+import { NavLink } from "@/components/common/NavLink";
 import "./index.scss";
 
 type Props = {
@@ -25,22 +25,13 @@ function CardShortcuts({ locale }: Props) {
         };
 
         switch (key) {
-            case 'web': return <Globe2Icon {...iconProps} />
+            case 'case_studies': return <ClipboardIcon {...iconProps} />
             case 'brands': return <SplinePointerIcon {...iconProps} />
             case 'articles': return <NewspaperIcon {...iconProps} />
             case 'games': return <GamepadIcon {...iconProps} />
             default: return <></>
         }
     }
-
-    const getLink = (key: string) => {
-        switch (key) {
-            case 'articles': return `https://blog.dominicfournier.com`;
-            default: return `/${key}`;
-        }
-    };
-
-
 
     return (
         <section>
@@ -49,8 +40,8 @@ function CardShortcuts({ locale }: Props) {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {Object.keys(t.project_types).map((k: string) => {
                         if (k !== "games") {
-                            return <Link href={getLink(k)} key={`feature-card-${k}`}>
-                                <Card className="border-2 border-transparent bg-card/50 hover:border-2 hover:border-primary cursor-pointer hover:text-primary transition-all overflow-hidden rotate-icon">
+                            return <NavLink href={`/${k}`} key={`feature-card-${k}`}>
+                                <Card className="border border-transparent bg-card/50 hover:border-primary cursor-pointer hover:text-primary transition-all overflow-hidden rotate-icon">
                                     <CardHeader>
                                         <CardTitle className="whitespace-nowrap">{t.project_types[k as keyof typeof t.project_types]}&nbsp;<ChevronRightIcon className="inline" size={36} /></CardTitle>
                                     </CardHeader>
@@ -58,7 +49,7 @@ function CardShortcuts({ locale }: Props) {
                                         {getIcon(k)}
                                     </CardContent>
                                 </Card>
-                            </Link>
+                            </NavLink>
                         } else {
                             return <Card key={`feature-card-${k}`} className="border-2 border-transparent bg-card/50 overflow-hidden opacity-50">
                                 <CardHeader>
