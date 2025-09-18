@@ -52,7 +52,6 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 contentPath={contentPath}
                 backHref={`/${locale}/case_studies`}
                 backLabel={t.back_to_list}
-                locale={locale}
             />
         </PageContainer>
     );

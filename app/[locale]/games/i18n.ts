@@ -10,4 +10,5 @@ const fr = {
   title: "Développement de Jeux",
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

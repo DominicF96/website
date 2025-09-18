@@ -11,7 +11,7 @@ function NotFound({ }: Props) {
     <div className="h-[100vh] w-full flex flex-col justify-center items-center text-center">
       <div className="mb-8">
         <H1>404</H1>
-        <Lead>You've wandered... Perfect time to enjoy some ramen!</Lead>
+        <Lead>You&apos;ve wandered... Perfect time to enjoy some ramen!</Lead>
       </div>
       <Image src="/vectors/ramen.svg" width={500} height={500} alt="RAMEN" className="hover:rotate-3 transition-all" />
       <Button asChild className="mt-8">

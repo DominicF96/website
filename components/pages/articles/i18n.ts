@@ -22,4 +22,5 @@ const fr: I18n = {
     }
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

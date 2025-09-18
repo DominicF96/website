@@ -31,4 +31,5 @@ const fr = {
   coming_soon: "Bientôt..."
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

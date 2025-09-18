@@ -13,4 +13,5 @@ const fr: I18n = {
     description: "Vitrine des marques pour lesquelles j'ai eu le plaisir de créer l'identité et le style visuel."
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

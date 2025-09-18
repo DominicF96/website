@@ -10,4 +10,5 @@ const fr = {
   all_rights_reserved: "Tous droits réservés",
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

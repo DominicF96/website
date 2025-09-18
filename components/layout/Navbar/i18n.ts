@@ -31,4 +31,5 @@ const fr = {
   contact: "Contactez-moi",
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

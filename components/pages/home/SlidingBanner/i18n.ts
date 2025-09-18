@@ -16,4 +16,5 @@ const fr = {
   row3: ["Autonome", "Polyvalent", "Leader", "Esprit d'équipe"],
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;

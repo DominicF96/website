@@ -52,4 +52,5 @@ const fr = {
   trusted_by: "Ils me font confiance",
 };
 
-export default { en, fr };
+const locales = { en, fr }; 
+export default locales;
