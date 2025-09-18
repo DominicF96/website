@@ -6,7 +6,7 @@ type Props = {
     categories: ArticleMetadata["tags"];
 };
 
-function PostCategories({ categories }: Props) {
+function ArticleCategories({ categories }: Props) {
     const uniqueCategories = [...new Set(categories)].sort((a, b) =>
         a.localeCompare(b)
     );
@@ -18,4 +18,4 @@ function PostCategories({ categories }: Props) {
     ));
 }
 
-export default PostCategories;
+export default ArticleCategories;

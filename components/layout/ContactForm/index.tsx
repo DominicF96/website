@@ -161,7 +161,7 @@ function ContactForm({ locale }: Props) {
   };
 
   return (
-    <CenteredContainer>
+    <CenteredContainer className=" overflow-hidden">
       <div className="relative flex flex-col md:flex-row justify-evenly gap-8 z-10">
         <H1
           id="contact"
@@ -257,7 +257,7 @@ function ContactForm({ locale }: Props) {
                           <SelectItem key={`reason_${key}`} value={key}>
                             {
                               t.reason_select.options[
-                                key as keyof typeof t.reason_select.options
+                              key as keyof typeof t.reason_select.options
                               ]
                             }
                           </SelectItem>

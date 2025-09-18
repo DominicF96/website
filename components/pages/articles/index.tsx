@@ -13,7 +13,7 @@ import { DatedArticleMetadata } from "@/types/article.types";
 //   SelectValue,
 // } from "@/components/ui/select";
 import { Locale } from "@/i18n.config";
-import ArticleRow from "./PostRow";
+import ArticleRow from "./ArticleRow";
 import { CenteredContainer } from "@/components/Container";
 import { H1, Muted, P } from "@/components/Typography";
 // import { Label } from "@/components/ui/label";
