@@ -19,7 +19,8 @@ export interface I18n {
     title: string;
     date: string;
     score: string;
-  }
+  },
+  coming_soon: string;
 }
 
 const en: I18n = {
@@ -43,7 +44,8 @@ const en: I18n = {
     title: "Title",
     date: "Date",
     score: "Score"
-  }
+  },
+  coming_soon: "Soon"
 };
 
 const fr: I18n = {
@@ -67,7 +69,8 @@ const fr: I18n = {
     title: "Titre",
     date: "Date",
     score: "Score"
-  }
+  },
+  coming_soon: "Bientôt"
 };
 
 const locales = { en, fr };

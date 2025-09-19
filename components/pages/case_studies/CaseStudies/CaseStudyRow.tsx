@@ -154,6 +154,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
                     <ArrowRightIcon className="ml-4" />
                   </NavLink>
                 </Button> */}
+                <Button className={`shadow-none`} disabled>{t.see_case_study}&nbsp;({t.coming_soon})</Button>
                 {caseData.url && (
                   <Button asChild variant="outline" className={`shadow-none`}>
                     <NavLink
