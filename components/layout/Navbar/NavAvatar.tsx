@@ -30,7 +30,7 @@ export default function NavAvatar() {
 
   const shuffleToSecret = (skipSound = false, startString?: string) => {
     if (animating) return;
-    console.log("🔓 Secret discovered. Congratulations!")
+    console.log("🔓 Secret discovered. Congratulations!");
     setAnimating(true);
     setGlitchActive(true);
 
@@ -39,7 +39,7 @@ export default function NavAvatar() {
       audio.play().catch((error) => console.error("Error playing sound:", error));
     }
 
-    const prev = startString || displayName; // use passed string or fallback
+    const prev = startString || displayName;
     const maxLength = Math.max(prev.length, secretName.length);
     let index = 0;
 
