@@ -9,6 +9,7 @@ import i18n from "./i18n";
 import Slideshow from "../../../common/Slideshow/Slideshow";
 import PARTNERS from "@/constants/partners";
 import { NavLink } from "@/components/common/NavLink";
+import { useCookies } from 'react-cookie';
 
 const shuffleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*?!";
 
@@ -21,12 +22,21 @@ function Hero({ locale }: Props) {
   const [secretUnlocked, setSecretUnlocked] = useState(false);
   const [titlePart2, setTitlePart2] = useState(t.title.part_2);
   const [animating, setAnimating] = useState(false);
+  const [cookies, setCookie] = useCookies(['secretUnlocked']);
 
   useEffect(() => {
     if (document.cookie.includes("secretUnlocked=true")) {
       shuffleToSecretTitlePart2(t.title.part_2);
     }
   }, [t.title.part_2]);
+
+  useEffect(() => {
+    if (cookies.secretUnlocked) {
+      setSecretUnlocked(cookies.secretUnlocked);
+      // Start animation after render
+      setTimeout(() => shuffleToSecretTitlePart2(), 50);
+    }
+  }, [cookies.secretUnlocked]);
 
   const setSecretCookie = () => {
     document.cookie = "secretUnlocked=true; path=/; max-age=" + 60 * 60 * 24 * 365;

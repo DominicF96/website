@@ -19,11 +19,6 @@ export function SecretImage(props: ISecretImageProps) {
         }
     }, [cookies.secretUnlocked]);
 
-    function removeSecret() {
-        
-        setSecretUnlocked(false);
-    }
-
     return (
         <CenteredContainer>
             <div className="block lg:hidden px-4 py-8 relative z-10">

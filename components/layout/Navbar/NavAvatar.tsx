@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { toast } from "sonner";
 
 const fullName = "Dominic Fournier";
 const hoverName = "DominicF96";
@@ -31,6 +32,7 @@ export default function NavAvatar() {
   const shuffleToSecret = (skipSound = false, startString?: string) => {
     if (animating) return;
     console.log("🔓 Secret discovered. Congratulations!");
+    toast("🔓 Secret discovered. Congratulations!");
     setAnimating(true);
     setGlitchActive(true);
 

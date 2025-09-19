@@ -279,52 +279,52 @@ article p {
   }
 
   10% {
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
     filter: drop-shadow(-2px -2px #a32952) drop-shadow(2px 2px #5cd6ad);
   }
 
   20% {
-    transform: translate(1px, -1px);
+    transform: translate(2px, -2px);
     filter: drop-shadow(2px -2px #a32952) drop-shadow(-2px 2px #5cd6ad);
   }
 
   30% {
-    transform: translate(-1px, 1px);
+    transform: translate(-2px, 2px);
     filter: drop-shadow(-2px 2px #a32952) drop-shadow(2px -2px #5cd6ad);
   }
 
   40% {
-    transform: translate(1px, 1px);
+    transform: translate(2px, 2px);
     filter: drop-shadow(2px 2px #a32952) drop-shadow(-2px -2px #5cd6ad);
   }
 
   50% {
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
     filter: drop-shadow(-2px -2px #a32952) drop-shadow(2px 2px #5cd6ad);
   }
 
   60% {
-    transform: translate(1px, 0);
+    transform: translate(2px, 0);
     filter: drop-shadow(2px 0 #a32952) drop-shadow(-2px 2px #5cd6ad);
   }
 
   70% {
-    transform: translate(-1px, 1px);
+    transform: translate(-2px, 2px);
     filter: drop-shadow(-2px 2px #a32952) drop-shadow(2px -2px #5cd6ad);
   }
 
   80% {
-    transform: translate(1px, -1px);
+    transform: translate(2px, -2px);
     filter: drop-shadow(2px -2px #a32952) drop-shadow(-2px 2px #5cd6ad);
   }
 
   90% {
-    transform: translate(-1px, 0);
+    transform: translate(-2px, 0);
     filter: drop-shadow(-2px 0 #a32952) drop-shadow(2px 2px #5cd6ad);
   }
 
   100% {
-    transform: translate(0, 1px);
+    transform: translate(0, 2px);
     filter: drop-shadow(2px 2px #a32952) drop-shadow(-2px -2px #5cd6ad);
   }
 }
