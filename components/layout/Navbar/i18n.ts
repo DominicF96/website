@@ -18,6 +18,7 @@ const en = {
   articles: "Articles",
   games: "Games",
   contact: "Contact me",
+  secret_found: "🔓 You've unlocked my final form. Félicitations!"
 };
 
 const fr = {
@@ -29,7 +30,8 @@ const fr = {
   articles: "Articles",
   games: "Jeux",
   contact: "Contactez-moi",
+  secret_found: "🔓 Vous avez débloqué ma forme finale. Félicitations!"
 };
 
-const locales = { en, fr }; 
+const locales = { en, fr };
 export default locales;

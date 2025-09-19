@@ -45,7 +45,7 @@ function Navbar({ locale }: Props) {
     >
       <CenteredContainer className="flex items-center">
         <NavLink href="/" className="flex items-center text-lg">
-          <NavAvatar />
+          <NavAvatar locale={locale}/>
         </NavLink>
         <Button
           variant="link"

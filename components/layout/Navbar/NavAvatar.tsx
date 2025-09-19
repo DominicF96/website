@@ -1,13 +1,20 @@
 "use client";
+import { Locale } from "@/i18n.config";
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
+import i18n from "./i18n";
 
 const fullName = "Dominic Fournier";
 const hoverName = "DominicF96";
 const secretName = "Scintillar";
 const shuffleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*?!";
 
-export default function NavAvatar() {
+interface NavAvatarProps {
+  locale: Locale
+};
+
+export default function NavAvatar({ locale }: NavAvatarProps) {
+  const t = i18n[locale];
   const [displayName, setDisplayName] = useState(fullName);
   const [animating, setAnimating] = useState(false);
   const [secretUnlocked, setSecretUnlocked] = useState(false);
@@ -32,7 +39,7 @@ export default function NavAvatar() {
   const shuffleToSecret = (skipSound = false, startString?: string) => {
     if (animating) return;
     console.log("🔓 Secret discovered. Congratulations!");
-    toast("🔓 Secret discovered. Congratulations!");
+    toast(t.secret_found);
     setAnimating(true);
     setGlitchActive(true);
 
