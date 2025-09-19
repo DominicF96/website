@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { H3, Muted, P } from "../../../Typography";
+import { H3, Muted } from "../../../Typography";
 import { CenteredContainer } from "../../../Container";
 import i18n from "./i18n";
 import { Locale } from "@/i18n.config";
@@ -9,11 +9,13 @@ import { Button } from "../../../ui/button";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { format, parseISO } from "date-fns";
 import { NavLink } from "@/components/common/NavLink";
-import { ArrowRightIcon, CalendarIcon, UserRoundCogIcon } from "lucide-react";
+import { CalendarIcon, FolderIcon, UserRoundCogIcon } from "lucide-react";
 import { CaseStudyMetadata } from "@/types/case_study.types";
-import "./index.css";
 import { mapLocaleToDateFns } from "@/utils/time";
 import { capitalize } from "@/utils/formatting";
+import { IconLabelAttribute } from "@/components/common/IconLabelAttribute";
+import CaseStudyCategories from "./CaseStudyCategories";
+import "./index.css";
 
 type Props = {
   caseData: CaseStudyMetadata;
@@ -102,17 +104,6 @@ function CaseStudyRow({ caseData, locale }: Props) {
       >
         <CenteredContainer className="relative z-10">
           <H3>{caseData.title}</H3>
-          <Muted className="mt-2 flex flex-col gap-2">
-            <span>
-              <CalendarIcon className="inline" size={16} />&nbsp;
-              <time>
-                {capitalize(format(parseISO(caseData.date), "LLLL yyyy", {
-                  locale: mapLocaleToDateFns(locale),
-                }))}
-              </time>
-            </span>
-            <span><UserRoundCogIcon className="inline" size={16} />&nbsp;{caseData.role}</span>
-          </Muted>
           <div
             style={
               isInView
@@ -121,9 +112,31 @@ function CaseStudyRow({ caseData, locale }: Props) {
             }
           >
             <div>
-              <Muted className="mt-4 lg:max-w-[450px]">
+              <Muted className="lg:max-w-[450px]">
                 {caseData.description}
               </Muted>
+              <Muted className="mt-4 flex flex-col gap-2 text-sm">
+                <IconLabelAttribute
+                  Icon={CalendarIcon}
+                  label={t.date}
+                  value={capitalize(format(parseISO(caseData.date), "LLLL yyyy", {
+                    locale: mapLocaleToDateFns(locale),
+                  }))}
+                />
+                <IconLabelAttribute
+                  Icon={FolderIcon}
+                  label={t.project_type}
+                  value={caseData.project_type}
+                />
+                <IconLabelAttribute
+                  Icon={UserRoundCogIcon}
+                  label={t.role}
+                  value={caseData.role}
+                />
+              </Muted>
+              <div className="mt-4 flex flex-wrap gap-2 mb-4 lg:max-w-[450px]">
+                <CaseStudyCategories categories={caseData.tags.flat()} />
+              </div>
               <div className="my-8 border border-primary max-h-[600px] overflow-hidden rounded-lg shadow-2xl pointer-events-none block lg:hidden">
                 <Image
                   src={`/images/cases/${caseData.id}.png`}

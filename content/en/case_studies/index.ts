@@ -11,7 +11,7 @@ const data: DatedCaseStudyMetadata[] = [
     "url": "https://anthonyking.ca",
     "score": 8,
     "hash": "5d93a1797db0c72cc8c9defaa75b33f162dd2f63c81a341a1ce1703838d663da",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "eosnation_ens",
@@ -22,7 +22,7 @@ const data: DatedCaseStudyMetadata[] = [
     "url": "https://eosnameservice.io",
     "score": 6,
     "hash": "bff1565d37d19f5ce30b7431363355b888b767af1f0d08ad2ecea25075c18d74",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "eosnation_spyglass",
@@ -33,7 +33,7 @@ const data: DatedCaseStudyMetadata[] = [
     "url": "https://spyglass.network",
     "score": 4,
     "hash": "7376c08379b2f7d967da88d596c134db3dc7d38352c52becde836a9b7b969098",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "fanslab_webapp",
@@ -43,8 +43,8 @@ const data: DatedCaseStudyMetadata[] = [
     "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Web de Fanslab.",
     "url": "https://drive.google.com/file/d/1LxtnU_kqo1KnYF4QZSPGDbF4Hqd4Uo0O/view?usp=drive_link",
     "score": 6,
-    "hash": "5db892503f589c86e8f7d82e4105123ac10dbabd5c239994d05d3534d409d841",
-    "last_updated": "2025-09-18"
+    "hash": "464e766b75c8be6d9f675f26603038c8c548d8be75e17b040c533aaa454fae85",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "monark",
@@ -55,7 +55,7 @@ const data: DatedCaseStudyMetadata[] = [
     "url": "https://monark.io",
     "score": 8,
     "hash": "98750f3d09d818f0c521ddbbf60dc1f111e05383f6fe5708f82d92b4978ced6b",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "oreus",
@@ -65,7 +65,7 @@ const data: DatedCaseStudyMetadata[] = [
     "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de ma société de services logiciels, Oreus.",
     "score": 7,
     "hash": "ba37af77ddd4d84e343c9c3555cacfc03e9c9757559277ffd260d2862d5b98ef",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "oreus_balance_website",
@@ -75,7 +75,7 @@ const data: DatedCaseStudyMetadata[] = [
     "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la conception d'Oreus Balance, une application Web de finances personnelles.",
     "score": 6,
     "hash": "498b695761dd97404b0b86ae465ae8d8cfcdba5e5b7b1e68a3a71bcaf76a69d5",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "pinax_app",
@@ -86,7 +86,7 @@ const data: DatedCaseStudyMetadata[] = [
     "url": "https://app.pinax.network",
     "score": 7,
     "hash": "2ad08cdfe3c5e17fbbc6d21300312f1544d46eb68260b8c9a944a89010d0a78a",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   },
   {
     "id": "pinax_website",
@@ -97,7 +97,7 @@ const data: DatedCaseStudyMetadata[] = [
     "url": "https://pinax.network",
     "score": 8,
     "hash": "8727d0008c631d191b9162400ac8ef3db7721a4f8e87c86ffb9cf6f0685af3ad",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   }
 ];
 

@@ -4,100 +4,165 @@ import { DatedCaseStudyMetadata } from "@/types/case_study.types";
 const data: DatedCaseStudyMetadata[] = [
   {
     "id": "anthony_king_website",
-    "title": "Anthony King Site Web",
+    "title": "Anthony King",
     "date": "2024-05-10T00:00:00.000Z",
+    "project_type": "Site web",
     "role": "Conception complète",
-    "description": "Anthony King est un courtier hypothécaire de la région de Montréal. Il m'a approché pour bâtir son site web professionnel.",
+    "description": "Anthony King, courtier hypothécaire à Montréal, m'a confié la création d'un site web professionnel pour renforcer sa crédibilité et attirer de nouveaux clients.",
     "url": "https://anthonyking.ca",
     "score": 8,
-    "hash": "5d93a1797db0c72cc8c9defaa75b33f162dd2f63c81a341a1ce1703838d663da",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Finance",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "ad709eb08fa23f8e3f90945ec9426be0548403a5f3a68cd49715a14707f4db41",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "eosnation_ens",
-    "title": "EOS Name Service",
+    "title": "Registre de noms EOS",
     "date": "2023-05-01T00:00:00.000Z",
-    "role": "Design & Gestion",
+    "project_type": "Application web",
+    "role": "Définition de produit, design",
     "description": "EOS Name Service est une plateforme permettant d'associer des adresses EOS et Wax à des noms uniques, comme le permettrait un service de noms de domaine pour des sites web.",
     "url": "https://eosnameservice.io",
     "score": 6,
-    "hash": "bff1565d37d19f5ce30b7431363355b888b767af1f0d08ad2ecea25075c18d74",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Web3, Blockchain",
+      "Gestion de projet",
+      "Design"
+    ],
+    "hash": "3ae268de767895150b06a7f083406ffe64bf3483c32f8397476317a957873c10",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "eosnation_spyglass",
     "title": "Spyglass",
     "date": "2023-01-01T00:00:00.000Z",
+    "project_type": "Application web",
     "role": "Conception complète",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Spyglass Lost Transactions.",
+    "description": "Spyglass apporte de la transparence dans le traitement de transactions Blockchain avant leur apparission sur les réseaux publiques, grâce à une intégration directe aux indexeurs.",
     "url": "https://spyglass.network",
     "score": 4,
-    "hash": "7376c08379b2f7d967da88d596c134db3dc7d38352c52becde836a9b7b969098",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Web3, Blockchain",
+      "Gestion de produit",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "12881e4ba0bd26d71309a897efc0c69f04644de027b0ab85644cabd78ab71802",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "fanslab_webapp",
     "title": "Fanslab",
     "date": "2020-07-20T00:00:00.000Z",
+    "project_type": "Application web",
     "role": "Développeur principal",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Web de Fanslab.",
+    "description": "Fanslab était une plateforme de communauté intelligente ayant permis à plusieurs grandes entreprises de continuer leurs conférences en format numérique durant la pandémie.",
     "url": "https://drive.google.com/file/d/1LxtnU_kqo1KnYF4QZSPGDbF4Hqd4Uo0O/view?usp=drive_link",
     "score": 6,
-    "hash": "5db892503f589c86e8f7d82e4105123ac10dbabd5c239994d05d3534d409d841",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Évènementiel",
+      "Stratégie numérique",
+      "Gestion de projet",
+      "Frontend"
+    ],
+    "hash": "b11c032b8baa2d08c50817a3f6ea81eabfdacbda1f1b5d195d897cb75d0387ab",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "monark",
     "title": "Monark",
     "date": "2025-03-15T00:00:00.000Z",
+    "project_type": "Entreprise",
     "role": "Co-Fondateur, CTO",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons apprises au cours de mon mandat chez Monark en tant que CTO.",
+    "description": "Monark est un acteur positif du Web3 visant à résoudre plusieurs enjeux majeurs du domaine, dont la formation, l'acquisition de talent et l'intégration en industrie.",
     "url": "https://monark.io",
     "score": 8,
-    "hash": "98750f3d09d818f0c521ddbbf60dc1f111e05383f6fe5708f82d92b4978ced6b",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Startup",
+      "Web3, Blockchain",
+      "Entrepreneuriat",
+      "Stratégie numérique",
+      "Gestion de projet",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "4c37e8de895456d160cfb0968904fc1eafc6ad7294383d0cb3621eb1847835af",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "oreus",
     "title": "Oreus",
     "date": "2022-11-01T00:00:00.000Z",
+    "project_type": "Entreprise",
     "role": "Co-fondateur, CTO",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de ma société de services logiciels, Oreus.",
+    "description": "Oreus oeuvrait dans le service de développement logiciel. Bien que de trop courte durée, cette expérience a forgé de solides apprentissages et partenariats.",
     "score": 7,
-    "hash": "ba37af77ddd4d84e343c9c3555cacfc03e9c9757559277ffd260d2862d5b98ef",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Startup",
+      "Service logiciel",
+      "Entrepreneuriat",
+      "Stratégie numérique",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "8b5ea3a97d47266188d4b312272c3c9ba88b328af990f43d48cdf48929c4d6ab",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "oreus_balance_website",
     "title": "Oreus Balance",
     "date": "2021-07-01T00:00:00.000Z",
+    "project_type": "Application web",
     "role": "Conception complète",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la conception d'Oreus Balance, une application Web de finances personnelles.",
+    "description": "Oreus Balance est l'idée qui a lancée la fondation d'Oreus. Née d'un besoin de transparence sur nos finances personnelles.",
     "score": 6,
-    "hash": "498b695761dd97404b0b86ae465ae8d8cfcdba5e5b7b1e68a3a71bcaf76a69d5",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Startup",
+      "Finance",
+      "Onboarding",
+      "Design"
+    ],
+    "hash": "e59508ef8a0274ae26ba46e41e3f8eda281e345ee9e48ff4fd7cbec1fb55ec00",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "pinax_app",
     "title": "Pinax App",
     "date": "2023-11-18T00:00:00.000Z",
-    "role": "Développement Frontend",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Web de Pinax.",
+    "project_type": "Application web",
+    "role": "Conception complète",
+    "description": "Pinax oeuvre dans l'indexation de données blockchain, contribuant à l'infrastructure The Graph, l'entreprise désirait une plateforme pour l'accès à ses données.",
     "url": "https://app.pinax.network",
     "score": 7,
-    "hash": "2ad08cdfe3c5e17fbbc6d21300312f1544d46eb68260b8c9a944a89010d0a78a",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Web3, Blockchain",
+      "Gestion de produit",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "b7063836532359cb83f8f817a42d414e4f46bfedece4e55e34b09a8bb1f318bb",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "pinax_website",
     "title": "Pinax Website",
     "date": "2023-08-01T00:00:00.000Z",
+    "project_type": "Site web",
     "role": "Conception complète",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction du site Web de Pinax.",
+    "description": "Pinax oeuvre dans l'indexation de données blockchain, l'entreprise m'a confié le mandat de design, développement et maintenance.",
     "url": "https://pinax.network",
     "score": 8,
-    "hash": "8727d0008c631d191b9162400ac8ef3db7721a4f8e87c86ffb9cf6f0685af3ad",
-    "last_updated": "2025-09-18"
+    "tags": [
+      "Web3, Blockchain",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "ce6479ca7bc3dc5f0f43eff45dc046c0911c7c2c820e1181840f795ace7f4f2c",
+    "last_updated": "2025-09-19"
   }
 ];
 

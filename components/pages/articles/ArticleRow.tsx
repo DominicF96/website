@@ -10,6 +10,8 @@ import { ArticleMetadata } from "@/types/article.types";
 import { NavLink } from "@/components/common/NavLink";
 import { formatDuration, mapLocaleToDateFns } from "@/utils/time";
 import { CalendarIcon, ChevronRight, ClockIcon } from "lucide-react";
+import { IconLabelAttribute } from "@/components/common/IconLabelAttribute";
+import i18n from "./i18n";
 
 type Props = {
     article: ArticleMetadata;
@@ -17,6 +19,7 @@ type Props = {
 };
 
 function ArticleRow({ article, locale }: Props) {
+    const t = i18n[locale];
     return (
         <NavLink href={`/articles/${article.id}`}>
             <div
@@ -26,19 +29,22 @@ function ArticleRow({ article, locale }: Props) {
                 <CenteredContainer>
                     <div className="md:grid md:grid-flow-row md:grid-cols-6 gap-8">
                         <div className="md:col-span-4">
-                            <H3 className="pb-0">{article.title}&nbsp;<ChevronRight className="inline" strokeWidth={3}/></H3>
-                            <Muted className="mt-2 flex flex-col gap-2">
-                                <span>
-                                    <CalendarIcon className="inline" size={16} />&nbsp;
-                                    <time>
-                                        {format(parseISO(article.date), "PPP", {
-                                            locale: mapLocaleToDateFns(locale),
-                                        })}
-                                    </time>
-                                </span>
-                                <span><ClockIcon className="inline" size={16} />&nbsp;{formatDuration(article.read_time_seconds, locale)}</span>
-                            </Muted>
+                            <H3 className="pb-0">{article.title}&nbsp;<ChevronRight className="inline" strokeWidth={3} /></H3>
                             <Muted className=" py-4 opacity-90">{article.excerpt}</Muted>
+                            <Muted className="mt-2 flex flex-col gap-2 text-sm">
+                                <IconLabelAttribute
+                                    Icon={CalendarIcon}
+                                    label={t.date}
+                                    value={format(parseISO(article.date), "PPP", {
+                                        locale: mapLocaleToDateFns(locale),
+                                    })}
+                                />
+                                <IconLabelAttribute
+                                    Icon={ClockIcon}
+                                    label={t.read_time}
+                                    value={formatDuration(article.read_time_seconds, locale)}
+                                />
+                            </Muted>
                             <div className="mt-4 flex flex-wrap gap-2 mb-4">
                                 <ArticleCategories categories={article.tags.flat()} />
                             </div>

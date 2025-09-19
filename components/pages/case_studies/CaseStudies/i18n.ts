@@ -5,7 +5,10 @@ export interface I18n {
     label: string;
     placeholder: string;
     not_found: string;
-  }
+  };
+  date: string;
+  project_type: string;
+  role: string;
   see_case_study: string;
   open: string;
   wip: string;
@@ -27,6 +30,9 @@ const en: I18n = {
     placeholder: "Search case studies...",
     not_found: "No case study found.",
   },
+  date: "Date",
+  project_type: "Project Type",
+  role: "Role",
   see_case_study: "See Case Study",
   open: "Open",
   wip: "Work in progress, check back soon!",
@@ -48,6 +54,9 @@ const fr: I18n = {
     placeholder: "Chercher des études de cas...",
     not_found: "Aucune étude de cas trouvée.",
   },
+  date: "Date",
+  project_type: "Type de projet",
+  role: "Rôle",
   see_case_study: "Voir l'étude de cas",
   open: "Ouvrir",
   wip: "En cours de rédaction, revenez bientôt!",
@@ -61,5 +70,5 @@ const fr: I18n = {
   }
 };
 
-const locales = { en, fr }; 
+const locales = { en, fr };
 export default locales;

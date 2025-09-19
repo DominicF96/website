@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
 import { Button } from "../../ui/button";
-import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
 import navbarLinks from "@/constants/links";
 import { Locale } from "@/i18n.config";
@@ -46,19 +44,19 @@ function Navbar({ locale }: Props) {
         }`}
     >
       <CenteredContainer className="flex items-center">
-        <NavLink href="/" className="flex items-center">
-          <Avatar className="inline-block mr-4 h-11 w-11">
-            {/* <AvatarImage
+        <NavLink href="/" className="flex items-center text-lg">
+          {/* <Avatar className="hidden lg:inline-block mr-4 h-11 w-11">
+            <AvatarImage
               src="/images/dominic_fournier_avatar.webp"
               alt="@DominicF96"
               className="h-[48px] w-[48px]"
-            /> */}
+            /> 
             <AvatarFallback
               className="bg-primary text-primary-foreground font-bold h-[48px] w-[48px]"
             >
               DF
             </AvatarFallback>
-          </Avatar>
+          </Avatar> */}
           <NavAvatar />
         </NavLink>
         <Button
@@ -107,7 +105,7 @@ function NavbarMobileDrawer({
 
   return (
     <div
-      className={`fixed z-50 w-full md:hidden top-[76px] min-h-[100vh] bg-background flex flex-col justify-between transition-all duration-500 py-24 pt-8 pb-32 px-4 md:p-8 ${isOpen ? "-left-0" : "left-full"
+      className={`fixed z-50 w-full md:hidden top-[68px] min-h-[100vh] bg-background flex flex-col justify-between transition-all duration-500 py-24 pt-8 pb-32 px-4 md:p-8 ${isOpen ? "-left-0" : "left-full"
         }`}
       style={{ height: "calc(100% - 76px)" }}
     >

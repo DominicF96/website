@@ -40,7 +40,7 @@ function Hero({ locale }: Props) {
             </Button>
           </div>
         </div>
-        <div className="lg:pr-24 pt-8">
+        <div className="xl:pr-24 pt-24">
           <Slideshow
             className="relative z-0"
             items={PARTNERS.map((partner) => {
@@ -55,7 +55,7 @@ function Hero({ locale }: Props) {
         </div>
         <ScrollCTA
           locale={locale}
-          className="absolute -bottom-20 -top-32 lg:top-auto lg:bottom-3 left-40 lg:left-auto lg:right-0 z-40"
+          className="absolute -bottom-20 -top-32 lg:top-auto lg:bottom-48 xl:top-auto xl:bottom-3 left-36 lg:left-auto lg:right-36 xl:-right-8 z-40"
         />
       </CenteredContainer>
     </>

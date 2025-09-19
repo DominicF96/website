@@ -21,7 +21,7 @@ function CenteredContainer({ children, className }: ContainerProps) {
 
 function PageContainer({ children, className }: ContainerProps) {
   return (
-    <main className={`relative pt-24 md:pt-36 ${className || ""}`}>
+    <main className={`relative pt-16 md:pt-36 ${className || ""}`}>
       <LoaderPage />
       <Image priority src="/images/hero-bg.webp" height={500} width={1500} alt="" className="w-full absolute top-0 fade-out-linear" />
       {children}

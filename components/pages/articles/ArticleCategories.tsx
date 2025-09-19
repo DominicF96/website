@@ -12,7 +12,7 @@ function ArticleCategories({ categories }: Props) {
     );
 
     return uniqueCategories.sort().map((category, idx) => (
-        <Badge key={idx} className="w-fit whitespace-nowrap pointer-events-none">
+        <Badge key={idx} className="w-fit whitespace-nowrap pointer-events-none" variant="secondary">
             {category}
         </Badge>
     ));

@@ -44,10 +44,12 @@ function generateCaseStudiesIndex(
             id: metadata.id,
             title: metadata.title,
             date: metadata.date,
+            project_type: metadata.project_type,
             role: metadata.role,
             description: metadata.description,
             url: metadata.url,
             score: metadata.score,
+            tags: metadata.tags,
             hash,
             last_updated: lastUpdated,
           };

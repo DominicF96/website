@@ -12,6 +12,8 @@ import { format, parseISO } from "date-fns";
 import { Locale } from "@/i18n.config";
 import ArticleCategories from "./ArticleCategories";
 import { formatDuration, mapLocaleToDateFns } from "@/utils/time";
+import { IconLabelAttribute } from "@/components/common/IconLabelAttribute";
+import i18n from "./i18n";
 
 interface ArticleMdxContentProps {
     contentPath: string;
@@ -31,6 +33,7 @@ export default async function ArticleMdxContent({
     if (!fs.existsSync(contentPath)) {
         notFound();
     }
+    const t = i18n[locale];
     const contentRaw = fs.readFileSync(contentPath, "utf-8");
     const { content, data } = matter(contentRaw);
 
@@ -47,15 +50,18 @@ export default async function ArticleMdxContent({
                             </div>
                         )}
                         <Muted className="mt-8 flex flex-col gap-2">
-                            <span className="flex items-center gap-4">
-                                <CalendarIcon size="16" className="inline" />
-                                <time>
-                                    {format(parseISO(data.date.toISOString()), "PPP", {
-                                        locale: mapLocaleToDateFns(locale),
-                                    })}
-                                </time>
-                            </span>
-                            <span><ClockIcon className="inline" size={16} />&nbsp;{formatDuration(data.read_time_seconds, locale)}</span>
+                            <IconLabelAttribute
+                                Icon={CalendarIcon}
+                                label={t.date}
+                                value={format(parseISO(data.date.toISOString()), "PPP", {
+                                    locale: mapLocaleToDateFns(locale),
+                                })}
+                            />
+                            <IconLabelAttribute
+                                Icon={ClockIcon}
+                                label={t.read_time}
+                                value={formatDuration(data.read_time_seconds, locale)}
+                            />
                             <div className="flex gap-2 py-2"><ArticleCategories categories={data.tags.flat()} /></div>
                         </Muted>
                     </div>
@@ -70,15 +76,18 @@ export default async function ArticleMdxContent({
                     )}
                     <H1>{data.title}</H1>
                     <Muted className="lg:hidden flex flex-col gap-2">
-                        <span className="flex items-center gap-4">
-                            <CalendarIcon size="16" className="inline" />
-                            <time>
-                                {format(parseISO(data.date.toISOString()), "PPP", {
-                                    locale: mapLocaleToDateFns(locale),
-                                })}
-                            </time>
-                        </span>
-                        <span><ClockIcon className="inline" size={16} />&nbsp;{formatDuration(data.read_time_seconds, locale)}</span>
+                        <IconLabelAttribute
+                            Icon={CalendarIcon}
+                            label={t.date}
+                            value={format(parseISO(data.date.toISOString()), "PPP", {
+                                locale: mapLocaleToDateFns(locale),
+                            })}
+                        />
+                        <IconLabelAttribute
+                            Icon={ClockIcon}
+                            label={t.read_time}
+                            value={formatDuration(data.read_time_seconds, locale)}
+                        />
                         <div className="flex gap-2 py-2"><ArticleCategories categories={data.tags.flat()} /></div>
                     </Muted>
                     <Muted>{data.excerpt}</Muted>

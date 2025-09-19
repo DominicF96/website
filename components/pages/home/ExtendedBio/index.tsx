@@ -10,7 +10,7 @@ function ExtendedBio({ locale }: Props) {
   const t = i18n[locale];
   return (
     <CenteredContainer>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-80 md:mt-48">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-40 md:mt-48">
         <div>
           <H3>{t.frontend.title}</H3>
           <Muted>{t.frontend.description}</Muted>
