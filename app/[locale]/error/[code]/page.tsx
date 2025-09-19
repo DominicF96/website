@@ -26,7 +26,7 @@ export default async function ErrorPage({ params }: { params: Params }) {
     return (
         <PageContainer>
             <CenteredContainer className="text-center flex items-center flex-col mb-32">
-                <H1>{sanitizedCode}</H1>
+                <H1 className="glitch">ERR{sanitizedCode}</H1>
                 <H2 className="mt-4 max-w-[700px]">
                     {t.error_definitions[sanitizedCode].title}
                 </H2>

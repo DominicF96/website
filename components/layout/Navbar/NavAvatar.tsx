@@ -169,7 +169,7 @@ export default function NavAvatar() {
           if (hoverTimer.current) clearTimeout(hoverTimer.current);
           hoverTimer.current = setTimeout(() => {
             if (!secretUnlocked) {
-              shuffleToSecret(false, displayName);
+              shuffleToSecret(false, "DominicF96");
             }
             if (hoverInterval.current) {
               clearInterval(hoverInterval.current);
