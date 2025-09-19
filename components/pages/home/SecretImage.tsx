@@ -25,7 +25,7 @@ export function SecretImage(props: ISecretImageProps) {
                 <Image src="/images/dominic_fournier.webp" height={256} width={256} alt="Dominic Fournier" />
                 {secretUnlocked && (
                     <div
-                        className={`absolute right-36 transition-all ease-out ${animateGlasses ? 'top-[72px]' : '-top-96'
+                        className={`absolute left-16 transition-all ease-out ${animateGlasses ? 'top-[72px]' : '-top-96'
                             }`}
                         style={{ transitionDuration: '10s' }}
                     >
