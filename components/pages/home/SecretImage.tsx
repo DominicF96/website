@@ -46,7 +46,6 @@ export function SecretImage(props: ISecretImageProps) {
                     width={1500}
                     alt="Dominic Fournier"
                     className="w-[500px]"
-                    onClick={() => removeSecret()}
                 />
                 {secretUnlocked && (
                     <div
@@ -60,7 +59,6 @@ export function SecretImage(props: ISecretImageProps) {
                             width={300}
                             alt=""
                             className="glitch-svg opacity-80"
-                            onClick={() => removeSecret()}
                         />
                     </div>
                 )}
