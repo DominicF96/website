@@ -9,14 +9,14 @@ const data: DatedArticleMetadata[] = [
     "img": "interview.webp",
     "img_alt": "Entretien entre deux personnes dans une salle de réunion",
     "img_src": "https://unsplash.com/fr/photos/femme-en-chemise-blanche-a-manches-longues-assise-sur-un-canape-rouge-1A8yP_5msac",
-    "excerpt": "J'ai interviewé quelques personnes et j'ai dû choisir les meilleurs candidats pour un rôle de génie logiciel. Voici quelques-unes des erreurs que j'ai vues faire et comment les éviter.",
+    "excerpt": "J'ai interviewé plusieurs personnes pour trouver les meilleurs candidats afin de combler des postes de génie logiciel. Voici quelques-unes des erreurs que j'ai vues et comment les éviter.",
     "read_time_seconds": 270,
     "tags": [
       "Carrière",
       "Gestion"
     ],
-    "hash": "60b273e2a04f97521b32d4dd0a83111eedd62571026d19d5303036e4c644bc36",
-    "last_updated": "2025-09-18"
+    "hash": "f33c26a34d7fa251d1c39b8e731f12ff2d2d5d23932287e15b4c27524f5948e2",
+    "last_updated": "2025-09-19"
   },
   {
     "id": "the-one-common-problem-in-software-engineering-teams",
@@ -32,7 +32,7 @@ const data: DatedArticleMetadata[] = [
       "Gestion"
     ],
     "hash": "6d038bc678bac107b1487716c2b80fcaf08667ef8af1e58c1ed938417ed0bf66",
-    "last_updated": "2025-09-18"
+    "last_updated": "2025-09-19"
   }
 ];
 

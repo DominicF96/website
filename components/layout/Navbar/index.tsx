@@ -45,18 +45,6 @@ function Navbar({ locale }: Props) {
     >
       <CenteredContainer className="flex items-center">
         <NavLink href="/" className="flex items-center text-lg">
-          {/* <Avatar className="hidden lg:inline-block mr-4 h-11 w-11">
-            <AvatarImage
-              src="/images/dominic_fournier_avatar.webp"
-              alt="@DominicF96"
-              className="h-[48px] w-[48px]"
-            /> 
-            <AvatarFallback
-              className="bg-primary text-primary-foreground font-bold h-[48px] w-[48px]"
-            >
-              DF
-            </AvatarFallback>
-          </Avatar> */}
           <NavAvatar />
         </NavLink>
         <Button

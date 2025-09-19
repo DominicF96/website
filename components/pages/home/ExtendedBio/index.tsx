@@ -1,5 +1,5 @@
 import React from "react";
-import { H3, Muted, P } from "../../../Typography";
+import { H3, Muted } from "../../../Typography";
 import { CenteredContainer } from "../../../Container";
 import { Locale } from "@/i18n.config";
 import i18n from "./i18n";

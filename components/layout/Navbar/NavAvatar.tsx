@@ -11,14 +11,16 @@ export default function NavAvatar() {
   const [animating, setAnimating] = useState(false);
   const [secretUnlocked, setSecretUnlocked] = useState(false);
   const [glitchActive, setGlitchActive] = useState(false);
-  const hoverTimer = useRef<NodeJS.Timeout | null>(null);
 
-  // Check cookie on mount
+  const hoverTimer = useRef<NodeJS.Timeout | null>(null);
+  const hoverCounter = useRef<number>(0);
+  const hoverInterval = useRef<NodeJS.Timeout | null>(null);
+
   useEffect(() => {
     if (document.cookie.includes("secretUnlocked=true")) {
-      setSecretUnlocked(true);
-      setDisplayName(secretName);
-      setGlitchActive(true);
+      // Start with fullName, then animate to secretName
+      setDisplayName(fullName);
+      shuffleToSecret(true); // pass a flag to skip sound if needed
     }
   }, []);
 
@@ -26,40 +28,65 @@ export default function NavAvatar() {
     document.cookie = "secretUnlocked=true; path=/; max-age=" + 60 * 60 * 24 * 365;
   };
 
-  const shuffleToSecret = () => {
+  const shuffleToSecret = (skipSound = false, startString?: string) => {
+    if (animating) return;
+    console.log("🔓 Secret discovered. Congratulations!")
     setAnimating(true);
-    setGlitchActive(true); // glitch starts immediately
-    const audio = new Audio("/sounds/secret_intro.mp3");
-    audio.play().catch((error) => {
-      console.error("Error playing sound:", error);
-    });
-    
-    const duration = 2000;
-    const steps = 50;
-    const stepTime = duration / steps;
-    let step = 0;
+    setGlitchActive(true);
 
-    const interval = setInterval(() => {
-      step++;
-      let result = "";
-      for (let i = 0; i < secretName.length; i++) {
-        if (step < steps - i * 2) {
-          const randIndex = Math.floor(Math.random() * shuffleChars.length);
-          result += shuffleChars[randIndex];
-        } else {
-          result += secretName[i];
-        }
-      }
-      setDisplayName(result);
+    if (!skipSound) {
+      const audio = new Audio("/sounds/secret_intro.mp3");
+      audio.play().catch((error) => console.error("Error playing sound:", error));
+    }
 
-      if (step >= steps + secretName.length) {
-        clearInterval(interval);
+    const prev = startString || displayName; // use passed string or fallback
+    const maxLength = Math.max(prev.length, secretName.length);
+    let index = 0;
+
+    const nextChar = () => {
+      if (index >= maxLength) {
         setAnimating(false);
         setSecretUnlocked(true);
         setSecretCookie();
-        // glitch stays active
+        return;
       }
-    }, stepTime);
+
+      let step = 0;
+      const stepsPerChar = 10;
+
+      const interval = setInterval(() => {
+        step++;
+
+        const newDisplay = [];
+        for (let i = 0; i < maxLength; i++) {
+          if (i < index) {
+            newDisplay[i] = i < secretName.length ? secretName[i] : "";
+          } else if (i === index) {
+            newDisplay[i] =
+              step < stepsPerChar
+                ? shuffleChars[Math.floor(Math.random() * shuffleChars.length)]
+                : i < secretName.length
+                  ? secretName[i]
+                  : "";
+          } else {
+            newDisplay[i] =
+              i < prev.length
+                ? prev[i]
+                : shuffleChars[Math.floor(Math.random() * shuffleChars.length)];
+          }
+        }
+
+        setDisplayName(newDisplay.join(""));
+
+        if (step >= stepsPerChar) {
+          clearInterval(interval);
+          index++;
+          setTimeout(nextChar, 50);
+        }
+      }, 40);
+    };
+
+    nextChar();
   };
 
   const animateToHover = () => {
@@ -127,18 +154,42 @@ export default function NavAvatar() {
         if (secretUnlocked) return;
         if (!animating && displayName !== hoverName) {
           animateToHover();
+
+          // Reset counter
+          hoverCounter.current = 0;
+
+          // Log every second
+          if (hoverInterval.current) clearInterval(hoverInterval.current);
+          hoverInterval.current = setInterval(() => {
+            console.log(`Hover seconds: ${hoverCounter.current + 1}`);
+            hoverCounter.current++;
+          }, 1000);
+
+          // Trigger shuffle after 10s
           if (hoverTimer.current) clearTimeout(hoverTimer.current);
           hoverTimer.current = setTimeout(() => {
-            if (!secretUnlocked) shuffleToSecret();
+            if (!secretUnlocked) {
+              shuffleToSecret(false, displayName);
+            }
+            if (hoverInterval.current) {
+              clearInterval(hoverInterval.current);
+              hoverInterval.current = null;
+            }
           }, 10000);
         }
       }}
       onMouseLeave={() => {
         if (secretUnlocked) return;
         if (!animating && displayName !== fullName) animateToFull();
+
+        // Clear timers
         if (hoverTimer.current) {
           clearTimeout(hoverTimer.current);
           hoverTimer.current = null;
+        }
+        if (hoverInterval.current) {
+          clearInterval(hoverInterval.current);
+          hoverInterval.current = null;
         }
       }}
     >

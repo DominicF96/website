@@ -4,99 +4,164 @@ import { DatedCaseStudyMetadata } from "@/types/case_study.types";
 const data: DatedCaseStudyMetadata[] = [
   {
     "id": "anthony_king_website",
-    "title": "Anthony King Site Web",
+    "title": "Anthony King",
     "date": "2024-05-10T00:00:00.000Z",
-    "role": "Conception complète",
-    "description": "Anthony King est un courtier hypothécaire de la région de Montréal. Il m'a approché pour bâtir son site web professionnel.",
+    "project_type": "Website",
+    "role": "Full Design",
+    "description": "Anthony King, a mortgage broker in Montreal, entrusted me with creating a professional website to strengthen his credibility and attract new clients.",
     "url": "https://anthonyking.ca",
     "score": 8,
-    "hash": "5d93a1797db0c72cc8c9defaa75b33f162dd2f63c81a341a1ce1703838d663da",
+    "tags": [
+      "Finance",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "bd4d8d0fb6b3be2802cbaf521cb4700dc64cac76227ce6feab3eff834e6f03ab",
     "last_updated": "2025-09-19"
   },
   {
     "id": "eosnation_ens",
     "title": "EOS Name Service",
     "date": "2023-05-01T00:00:00.000Z",
-    "role": "Design & Gestion",
-    "description": "EOS Name Service est une plateforme permettant d'associer des adresses EOS et Wax à des noms uniques, comme le permettrait un service de noms de domaine pour des sites web.",
+    "project_type": "Web Application",
+    "role": "Product Definition, Design",
+    "description": "EOS Name Service is a platform that allows associating EOS and Wax addresses with unique names, similar to a domain name service for websites.",
     "url": "https://eosnameservice.io",
     "score": 6,
-    "hash": "bff1565d37d19f5ce30b7431363355b888b767af1f0d08ad2ecea25075c18d74",
+    "tags": [
+      "Web3, Blockchain",
+      "Project Management",
+      "Design"
+    ],
+    "hash": "5f004d5ff91bf7f6122301110d0941173707058e3e53f52fc01dc3a7319ec8c0",
     "last_updated": "2025-09-19"
   },
   {
     "id": "eosnation_spyglass",
     "title": "Spyglass",
     "date": "2023-01-01T00:00:00.000Z",
-    "role": "Conception complète",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Spyglass Lost Transactions.",
+    "project_type": "Web Application",
+    "role": "Full Design",
+    "description": "Spyglass brings transparency to blockchain transaction processing before they appear on public networks, thanks to direct integration with indexers.",
     "url": "https://spyglass.network",
     "score": 4,
-    "hash": "7376c08379b2f7d967da88d596c134db3dc7d38352c52becde836a9b7b969098",
+    "tags": [
+      "Web3, Blockchain",
+      "Product Management",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "fab47e82ccfc771ac3153055c08166a564acb2a215e9c116cf1c9d49615c314f",
     "last_updated": "2025-09-19"
   },
   {
     "id": "fanslab_webapp",
     "title": "Fanslab",
     "date": "2020-07-20T00:00:00.000Z",
-    "role": "Développeur principal",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Web de Fanslab.",
+    "project_type": "Web Application",
+    "role": "Lead Developer",
+    "description": "Fanslab was a smart community platform that enabled several large companies to continue their conferences in digital format during the pandemic.",
     "url": "https://drive.google.com/file/d/1LxtnU_kqo1KnYF4QZSPGDbF4Hqd4Uo0O/view?usp=drive_link",
     "score": 6,
-    "hash": "464e766b75c8be6d9f675f26603038c8c548d8be75e17b040c533aaa454fae85",
+    "tags": [
+      "Event Management",
+      "Digital Strategy",
+      "Project Management",
+      "Frontend"
+    ],
+    "hash": "f3ff42910b5168988050a1d0c226c42135535572b593d48a304d4841a7b83189",
     "last_updated": "2025-09-19"
   },
   {
     "id": "monark",
     "title": "Monark",
     "date": "2025-03-15T00:00:00.000Z",
-    "role": "Co-Fondateur, CTO",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons apprises au cours de mon mandat chez Monark en tant que CTO.",
+    "project_type": "Company",
+    "role": "Co-Founder, CTO",
+    "description": "Monark is a positive Web3 player aiming to solve several major challenges in the field, including education, talent acquisition, and industry integration.",
     "url": "https://monark.io",
     "score": 8,
-    "hash": "98750f3d09d818f0c521ddbbf60dc1f111e05383f6fe5708f82d92b4978ced6b",
+    "tags": [
+      "Startup",
+      "Web3, Blockchain",
+      "Entrepreneurship",
+      "Digital Strategy",
+      "Project Management",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "3172dd3b3f0c84e077a121a241f227d38a85679bb78fdb957c46c5d50af83db8",
     "last_updated": "2025-09-19"
   },
   {
     "id": "oreus",
     "title": "Oreus",
     "date": "2022-11-01T00:00:00.000Z",
-    "role": "Co-fondateur, CTO",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de ma société de services logiciels, Oreus.",
+    "project_type": "Company",
+    "role": "Co-founder, CTO",
+    "description": "Oreus worked in software development services. Although short-lived, this experience provided valuable lessons and strong partnerships.",
     "score": 7,
-    "hash": "ba37af77ddd4d84e343c9c3555cacfc03e9c9757559277ffd260d2862d5b98ef",
+    "tags": [
+      "Startup",
+      "Software Services",
+      "Entrepreneurship",
+      "Digital Strategy",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "524232c7ed9aeba29cde00122d18364e9ac6474af2f8fcca7e7d3ac493e6abcc",
     "last_updated": "2025-09-19"
   },
   {
     "id": "oreus_balance_website",
     "title": "Oreus Balance",
     "date": "2021-07-01T00:00:00.000Z",
-    "role": "Conception complète",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la conception d'Oreus Balance, une application Web de finances personnelles.",
+    "project_type": "Web Application",
+    "role": "Full Design",
+    "description": "Oreus Balance is the idea that led to the founding of Oreus. Born from a need for transparency in our personal finances.",
     "score": 6,
-    "hash": "498b695761dd97404b0b86ae465ae8d8cfcdba5e5b7b1e68a3a71bcaf76a69d5",
+    "tags": [
+      "Startup",
+      "Finance",
+      "Onboarding",
+      "Design"
+    ],
+    "hash": "cc015e4c6550e8b0baffb44de9be1dcf47a22d9794bdd075ecb244a821dfb624",
     "last_updated": "2025-09-19"
   },
   {
     "id": "pinax_app",
     "title": "Pinax App",
     "date": "2023-11-18T00:00:00.000Z",
-    "role": "Développement Frontend",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Web de Pinax.",
+    "project_type": "Web Application",
+    "role": "Full Design",
+    "description": "Pinax works in blockchain data indexing, contributing to The Graph infrastructure. The company wanted a platform for accessing its data.",
     "url": "https://app.pinax.network",
     "score": 7,
-    "hash": "2ad08cdfe3c5e17fbbc6d21300312f1544d46eb68260b8c9a944a89010d0a78a",
+    "tags": [
+      "Web3, Blockchain",
+      "Product Management",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "3a9153cc5c2c2bea83e94bb3b12f786ef2d74f318fa5469b76462e82c1ce2574",
     "last_updated": "2025-09-19"
   },
   {
     "id": "pinax_website",
     "title": "Pinax Website",
     "date": "2023-08-01T00:00:00.000Z",
-    "role": "Conception complète",
-    "description": "Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction du site Web de Pinax.",
+    "project_type": "Website",
+    "role": "Full Design",
+    "description": "Pinax works in blockchain data indexing. The company entrusted me with the mandate for design, development, and maintenance.",
     "url": "https://pinax.network",
     "score": 8,
-    "hash": "8727d0008c631d191b9162400ac8ef3db7721a4f8e87c86ffb9cf6f0685af3ad",
+    "tags": [
+      "Web3, Blockchain",
+      "Design",
+      "Frontend"
+    ],
+    "hash": "7ad0659a3639ea42f494a6c007107d5ae72c7663fd78d45032b3f92102333bae",
     "last_updated": "2025-09-19"
   }
 ];
