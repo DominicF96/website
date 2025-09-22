@@ -16,7 +16,7 @@ const data: DatedArticleMetadata[] = [
       "Gestion"
     ],
     "hash": "f33c26a34d7fa251d1c39b8e731f12ff2d2d5d23932287e15b4c27524f5948e2",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "the-one-common-problem-in-software-engineering-teams",
@@ -32,7 +32,7 @@ const data: DatedArticleMetadata[] = [
       "Gestion"
     ],
     "hash": "6d038bc678bac107b1487716c2b80fcaf08667ef8af1e58c1ed938417ed0bf66",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   }
 ];
 
