@@ -42,7 +42,7 @@ const data: DatedCaseStudyMetadata[] = [
     "title": "Registre de noms EOS",
     "date": "2023-05-01T00:00:00.000Z",
     "project_type": "Application web",
-    "role": "Définition de produit, design",
+    "role": "Définition de produit & Design",
     "description": "EOS Name Service est une plateforme permettant d'associer des adresses EOS et Wax à des noms uniques, comme le permettrait un service de noms de domaine pour des sites web.",
     "url": "https://eosnameservice.io",
     "score": 6,
@@ -51,7 +51,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Gestion de projet",
       "Design"
     ],
-    "hash": "3ae268de767895150b06a7f083406ffe64bf3483c32f8397476317a957873c10",
+    "hash": "439ea389b00d6d515679da089f148aff0e007165b1897a4e9901c4f23bd8be36",
     "last_updated": "2025-09-22"
   },
   {
@@ -95,7 +95,7 @@ const data: DatedCaseStudyMetadata[] = [
     "title": "Monark",
     "date": "2025-03-15T00:00:00.000Z",
     "project_type": "Entreprise",
-    "role": "Co-Fondateur, CTO",
+    "role": "Co-Fondateur & CTO",
     "description": "Monark est un acteur positif du Web3 visant à résoudre plusieurs enjeux majeurs du domaine, dont la formation, l'acquisition de talent et l'intégration en industrie.",
     "url": "https://monark.io",
     "score": 8,
@@ -108,7 +108,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Design",
       "Frontend"
     ],
-    "hash": "4c37e8de895456d160cfb0968904fc1eafc6ad7294383d0cb3621eb1847835af",
+    "hash": "8055366a3525d86287cfb6558fc72e9fac0b2ed4c00f04a8a3686ddabca64e8a",
     "last_updated": "2025-09-22"
   },
   {
@@ -116,7 +116,7 @@ const data: DatedCaseStudyMetadata[] = [
     "title": "Oreus",
     "date": "2022-11-01T00:00:00.000Z",
     "project_type": "Entreprise",
-    "role": "Co-fondateur, CTO",
+    "role": "Co-fondateur & CTO",
     "description": "Oreus oeuvrait dans le service de développement logiciel. Bien que de trop courte durée, cette expérience a forgé de solides apprentissages et partenariats.",
     "score": 7,
     "tags": [
@@ -127,7 +127,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Design",
       "Frontend"
     ],
-    "hash": "8b5ea3a97d47266188d4b312272c3c9ba88b328af990f43d48cdf48929c4d6ab",
+    "hash": "4b1eacb5cc47cdd93f68811470ef50c21648989650fd884daa766f998f0e1fe6",
     "last_updated": "2025-09-22"
   },
   {

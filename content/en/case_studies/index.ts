@@ -95,7 +95,7 @@ const data: DatedCaseStudyMetadata[] = [
     "title": "Monark",
     "date": "2025-03-15T00:00:00.000Z",
     "project_type": "Company",
-    "role": "Co-Founder, CTO",
+    "role": "Co-Founder & CTO",
     "description": "Monark is a positive Web3 player aiming to solve several major challenges in the field, including education, talent acquisition, and industry integration.",
     "url": "https://monark.io",
     "score": 8,
@@ -108,7 +108,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Design",
       "Frontend"
     ],
-    "hash": "3172dd3b3f0c84e077a121a241f227d38a85679bb78fdb957c46c5d50af83db8",
+    "hash": "1647055a49fb06cd5dd810bac129bf0b28c7a77ada0cdc5d3620a23e1bafc914",
     "last_updated": "2025-09-22"
   },
   {
@@ -116,7 +116,7 @@ const data: DatedCaseStudyMetadata[] = [
     "title": "Oreus",
     "date": "2022-11-01T00:00:00.000Z",
     "project_type": "Company",
-    "role": "Co-founder, CTO",
+    "role": "Co-founder & CTO",
     "description": "Oreus worked in software development services. Although short-lived, this experience provided valuable lessons and strong partnerships.",
     "score": 7,
     "tags": [
@@ -127,7 +127,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Design",
       "Frontend"
     ],
-    "hash": "524232c7ed9aeba29cde00122d18364e9ac6474af2f8fcca7e7d3ac493e6abcc",
+    "hash": "6c9371eb8f3edccb97ce44510c4960e4ae6c5afe02a4cf1e27d482bcc7d6626b",
     "last_updated": "2025-09-22"
   },
   {
