@@ -9,7 +9,7 @@ import { Button } from "../../../ui/button";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { format, parseISO } from "date-fns";
 import { NavLink } from "@/components/common/NavLink";
-import { CalendarIcon, FolderIcon, UserRoundCogIcon } from "lucide-react";
+import { ArrowRightIcon, CalendarIcon, FolderIcon, UserRoundCogIcon } from "lucide-react";
 import { CaseStudyMetadata } from "@/types/case_study.types";
 import { mapLocaleToDateFns } from "@/utils/time";
 import { capitalize } from "@/utils/formatting";
@@ -67,6 +67,8 @@ function CaseStudyRow({ caseData, locale }: Props) {
   const collapsibleOpenStyle = {
     gridTemplateRows: "1fr",
   };
+
+  console.log(caseData);
 
   return (
     <div
@@ -148,13 +150,13 @@ function CaseStudyRow({ caseData, locale }: Props) {
                 />
               </div>
               <div className="mt-8 flex flex-col md:flex-row gap-2">
-                {/* <Button className={`shadow-none`} asChild >
+                {caseData.active ? <Button className={`shadow-none`} asChild >
                   <NavLink href={`/case_studies/${caseData.id}`} >
                     {t.see_case_study}
                     <ArrowRightIcon className="ml-4" />
                   </NavLink>
-                </Button> */}
-                <Button className={`shadow-none`} disabled>{t.see_case_study}&nbsp;({t.coming_soon})</Button>
+                </Button>
+                  : <Button className={`shadow-none`} disabled>{t.see_case_study}&nbsp;({t.coming_soon})</Button>}
                 {caseData.url && (
                   <Button asChild variant="outline" className={`shadow-none`}>
                     <NavLink
