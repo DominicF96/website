@@ -45,7 +45,7 @@ export default async function MdxContentPage({
                 <div className="col-span-3 flex flex-col gap-4">
                     <H1>{data.title}</H1>
                     <Muted>{data.excerpt}</Muted>
-                    <Image src={`/images/articles/${data.img}`} alt={data.img_alt} width={500} height={500} className="w-full rounded-3xl" />
+                    <Image src={`/images/cases/${data.id}.png`} alt={data.title} width={500} height={500} className="w-full rounded-3xl" />
                     <div className="prose prose-lg dark:prose-invert max-w-none pt-4 pb-16">
                         <MDXRemote source={content} components={components} />
                     </div>
