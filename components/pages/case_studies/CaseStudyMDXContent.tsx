@@ -40,9 +40,9 @@ export default async function CaseStudyMDXContent({
 
     return (
         <CenteredContainer className="mt-2">
-            <div className="grid grid-cols-4">
-                <div className="col-span-1">
-                    <div className="sticky top-24 pb-16">
+            <div className="grid grid-cols-3 lg:grid-cols-4">
+                <div className="hidden lg:block lg:col-span-1 pb-16">
+                    <div className="sticky top-24">
                         {backHref && backLabel && (
                             <div className="mt-8">
                                 <NavLink href={backHref} className="inline-flex items-center text-primary font-medium group no-underline">
@@ -73,8 +73,34 @@ export default async function CaseStudyMDXContent({
                     </div>
                 </div>
                 <div className="col-span-3 flex flex-col gap-4">
+                    {backHref && backLabel && (
+                        <div className="mt-8 lg:hidden">
+                            <NavLink href={backHref} className="inline-flex items-center text-primary font-medium group no-underline">
+                                <ChevronLeftIcon />&nbsp;{backLabel}
+                            </NavLink>
+                        </div>
+                    )}
                     <H1>{data.title}</H1>
-                    <Muted>{data.excerpt}</Muted>
+                    <Muted className="lg:hidden flex flex-col gap-2">
+                        {/* <IconLabelAttribute
+                                Icon={CalendarIcon}
+                                label={t.date}
+                                value={format(parseISO(data.date), "LLLL yyyy", {
+                                    locale: mapLocaleToDateFns(locale),
+                                })}
+                            /> */}
+                        <IconLabelAttribute
+                            Icon={FolderIcon}
+                            label={t.project_type}
+                            value={data.project_type}
+                        />
+                        <IconLabelAttribute
+                            Icon={UserRoundCogIcon}
+                            label={t.role}
+                            value={data.role}
+                        />
+                        <div className="flex gap-2 py-2 flex-wrap"><CaseStudyCategories categories={data.tags.flat()} /></div>
+                    </Muted>
                     <Image src={`/images/cases/${data.id}.png`} alt={data.title} width={500} height={500} className="w-full rounded-3xl" />
                     <div className="prose prose-lg dark:prose-invert max-w-none pt-4 pb-16 rendered-content">
                         <MDXRemote source={content} components={components} />
