@@ -12,10 +12,11 @@ const data: DatedArticleMetadata[] = [
     "excerpt": "I've interviewed a few people and had to choose the best candidates for a software engineering role. Here are some of the mistakes I've seen people do and how to avoid them.",
     "read_time_seconds": 270,
     "tags": [
+      "Article",
       "Career",
       "Management"
     ],
-    "hash": "7f8ff1d23b22af69d56cd1838ed6f6625414c89d11813a67803f83e5a6393ea2",
+    "hash": "38d4b3a7258888501d0767769be4b46bc683c9f988d01927f313af8a34380124",
     "last_updated": "2025-09-22"
   },
   {
@@ -28,10 +29,11 @@ const data: DatedArticleMetadata[] = [
     "excerpt": "Communication; know the different challenges and how to address them.",
     "read_time_seconds": 280,
     "tags": [
+      "Article",
       "Career",
       "Management"
     ],
-    "hash": "77e6e615037252e71ddd20064de11173e7d3a9813858f2fc78db7af8b481ec1e",
+    "hash": "fe9edfc897d12b4e3b6eacd42ffcdba40f0f413e920b756c39d89982b76bdcbf",
     "last_updated": "2025-09-22"
   }
 ];

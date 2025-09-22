@@ -12,10 +12,11 @@ const data: DatedArticleMetadata[] = [
     "excerpt": "J'ai interviewé plusieurs personnes pour trouver les meilleurs candidats afin de combler des postes de génie logiciel. Voici quelques-unes des erreurs que j'ai vues et comment les éviter.",
     "read_time_seconds": 270,
     "tags": [
+      "Article",
       "Carrière",
       "Gestion"
     ],
-    "hash": "f33c26a34d7fa251d1c39b8e731f12ff2d2d5d23932287e15b4c27524f5948e2",
+    "hash": "16e0ccf7a38c6512d8b154782ff65962e6f9103965334f1a73ac21aa4e9b155a",
     "last_updated": "2025-09-22"
   },
   {
@@ -28,10 +29,11 @@ const data: DatedArticleMetadata[] = [
     "excerpt": "La communication; connaître les différents défis et comment les relever.",
     "read_time_seconds": 280,
     "tags": [
+      "Article",
       "Carrière",
       "Gestion"
     ],
-    "hash": "6d038bc678bac107b1487716c2b80fcaf08667ef8af1e58c1ed938417ed0bf66",
+    "hash": "09f0c34875e9155626639a74ee498bd05c2f70197b6165f896dffd0be40abec2",
     "last_updated": "2025-09-22"
   }
 ];
