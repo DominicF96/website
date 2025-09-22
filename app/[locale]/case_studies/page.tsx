@@ -1,5 +1,5 @@
 import { Locale } from "@/i18n.config";
-import CaseStudies from "@/components/pages/case_studies/CaseStudies";
+import CaseStudies from "@/components/pages/case_studies";
 import { PageContainer } from "@/components/Container";
 import metadata from "./metadata";
 

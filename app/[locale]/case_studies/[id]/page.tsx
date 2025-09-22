@@ -1,7 +1,7 @@
 import path from "path";
 import type { Metadata } from "next";
 import { generateMdxMetadata } from "@/utils/generate-mdx-metadata";
-import MdxContentPage from "@/components/common/mdx-content-page";
+import CaseStudyMDXContent from "@/components/pages/case_studies/CaseStudyMDXContent";
 import { PageContainer } from "@/components/Container";
 import { Locale } from "@/i18n.config";
 import i18n from "./i18n";
@@ -48,10 +48,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
     return (
         <PageContainer>
-            <MdxContentPage
+            <CaseStudyMDXContent
                 contentPath={contentPath}
                 backHref={`/${locale}/case_studies`}
                 backLabel={t.back_to_list}
+                locale={locale}
             />
         </PageContainer>
     );

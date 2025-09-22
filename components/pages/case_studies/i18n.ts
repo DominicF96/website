@@ -6,6 +6,7 @@ export interface I18n {
     placeholder: string;
     not_found: string;
   };
+  read_time: string;
   date: string;
   project_type: string;
   role: string;
@@ -31,6 +32,7 @@ const en: I18n = {
     placeholder: "Search case studies...",
     not_found: "No case study found.",
   },
+  read_time: "Estimated reading time",
   date: "Date",
   project_type: "Project Type",
   role: "Role",
@@ -56,6 +58,7 @@ const fr: I18n = {
     placeholder: "Chercher des études de cas...",
     not_found: "Aucune étude de cas trouvée.",
   },
+  read_time: "Temps de lecture estimé",
   date: "Date",
   project_type: "Type de projet",
   role: "Rôle",

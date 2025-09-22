@@ -62,14 +62,14 @@ export default async function ArticleMdxContent({
                                 label={t.read_time}
                                 value={formatDuration(data.read_time_seconds, locale)}
                             />
-                            <div className="flex gap-2 py-2"><ArticleCategories categories={data.tags.flat()} /></div>
+                            <div className="flex gap-2 py-2 flex-wrap"><ArticleCategories categories={data.tags.flat()} /></div>
                         </Muted>
                     </div>
                 </div>
                 <div className="col-span-3 flex flex-col gap-4">
                     {backHref && backLabel && (
                         <div className="block lg:hidden mt-8">
-                            <NavLink href={backHref} className="inline-flex items-center text-primary font-medium group no-underline">
+                            <NavLink href={backHref} className="inline-flex items-center text-primary font-medium group no-underline rendered-content">
                                 <ChevronLeftIcon />&nbsp;{backLabel}
                             </NavLink>
                         </div>

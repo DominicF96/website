@@ -328,3 +328,16 @@ article p {
     filter: drop-shadow(2px 2px #a32952) drop-shadow(-2px -2px #5cd6ad);
   }
 }
+
+.rendered-content {
+    ol {
+        list-style: decimal;
+        margin-left: 16px;
+        padding-left: 16px;
+    }
+    ul {
+        list-style: disc;
+        margin-left: 16px;
+        padding-left: 16px;
+    }
+}

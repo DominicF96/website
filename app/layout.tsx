@@ -1,7 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import ClientProviders from "@/components/ClientProviders";
-import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
+import "./globals.scss";
 
 const jetbrainsMono = JetBrains_Mono({
   weight: "400",

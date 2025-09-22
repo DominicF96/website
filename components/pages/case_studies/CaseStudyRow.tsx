@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { H3, Muted } from "../../../Typography";
-import { CenteredContainer } from "../../../Container";
+import { H3, Muted } from "../../Typography";
+import { CenteredContainer } from "../../Container";
 import i18n from "./i18n";
 import { Locale } from "@/i18n.config";
 import Image from "next/image";
-import { Button } from "../../../ui/button";
+import { Button } from "../../ui/button";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { format, parseISO } from "date-fns";
 import { NavLink } from "@/components/common/NavLink";

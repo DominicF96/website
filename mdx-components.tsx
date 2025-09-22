@@ -31,18 +31,18 @@ export const components = {
         <h6 className="text-sm md:text-md font-bold mt-6 uppercase" {...props} />
     ),
     p: (props: ParagraphProps) => <p className="leading-snug text-muted-foreground py-3" {...props} />,
-    ol: (props: ListProps) => (
-        <ol className="list-decimal pl-5 space-y-2" {...props} />
-    ),
     ul: (props: ListProps) => (
         <ul className="list-disc pl-5 space-y-1" {...props} />
     ),
-    li: (props: ListItemProps) => <li className="pl-1" {...props} />,
+    ol: (props: ListProps) => (
+        <ol className="list-decimal pl-5 space-y-2" {...props} />
+    ),
+    li: (props: ListItemProps) => <li {...props} />,
     em: (props: ComponentPropsWithoutRef<"em">) => (
         <em className="font-medium" {...props} />
     ),
     strong: (props: ComponentPropsWithoutRef<"strong">) => (
-        <strong className="font-medium" {...props} />
+        <strong className="font-bold" {...props} />
     ),
     a: ({ href, children, ...props }: AnchorProps) => {
         const className =
