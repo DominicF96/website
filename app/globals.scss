@@ -334,10 +334,12 @@ article p {
         list-style: decimal;
         margin-left: 16px;
         padding-left: 16px;
+        color: hsl(var(--muted-foreground));
     }
     ul {
         list-style: disc;
         margin-left: 16px;
         padding-left: 16px;
+        color: hsl(var(--muted-foreground));
     }
 }
