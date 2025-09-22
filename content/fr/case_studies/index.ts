@@ -22,7 +22,7 @@ const data: DatedCaseStudyMetadata[] = [
   {
     "id": "cactusoft_app",
     "title": "Cactusoft",
-    "date": "2025-08-25T00:00:00.000Z",
+    "date": "2024-08-25T00:00:00.000Z",
     "project_type": "Application web",
     "role": "UX designer principal",
     "description": "Cactusoft développe une application de gestion de chantier tout-en-un et cherchait à moderniser l'app, simplifier des problèmes complexes et améliorer l'expérience des développeurs avec des designs réutilisables.",
@@ -34,7 +34,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Résolution de problème",
       "Communication"
     ],
-    "hash": "ad90dab454e11ae34912ca4edaf4e5d0bc1383725f184b2ddf22763959d1c155",
+    "hash": "b51a2f19817716560c087d27e2ce3729dbcf08ed780ced6a2dd26ea9739bdd98",
     "last_updated": "2025-09-22"
   },
   {
