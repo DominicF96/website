@@ -17,7 +17,25 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "ad709eb08fa23f8e3f90945ec9426be0548403a5f3a68cd49715a14707f4db41",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
+  },
+  {
+    "id": "cactusoft_app",
+    "title": "Cactusoft",
+    "date": "2025-08-25T00:00:00.000Z",
+    "project_type": "Application web",
+    "role": "UX designer principal",
+    "description": "Cactusoft développe une application de gestion de chantier tout-en-un et cherchait à moderniser l'app, simplifier des problèmes complexes et améliorer l'expérience des développeurs avec des designs réutilisables.",
+    "url": "https://cactusoft.app",
+    "score": 7,
+    "tags": [
+      "Système de design",
+      "Expérience développeur",
+      "Résolution de problème",
+      "Communication"
+    ],
+    "hash": "ad90dab454e11ae34912ca4edaf4e5d0bc1383725f184b2ddf22763959d1c155",
+    "last_updated": "2025-09-22"
   },
   {
     "id": "eosnation_ens",
@@ -34,7 +52,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Design"
     ],
     "hash": "3ae268de767895150b06a7f083406ffe64bf3483c32f8397476317a957873c10",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "eosnation_spyglass",
@@ -52,7 +70,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "12881e4ba0bd26d71309a897efc0c69f04644de027b0ab85644cabd78ab71802",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "fanslab_webapp",
@@ -70,7 +88,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "b11c032b8baa2d08c50817a3f6ea81eabfdacbda1f1b5d195d897cb75d0387ab",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "monark",
@@ -91,7 +109,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "4c37e8de895456d160cfb0968904fc1eafc6ad7294383d0cb3621eb1847835af",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "oreus",
@@ -110,7 +128,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "8b5ea3a97d47266188d4b312272c3c9ba88b328af990f43d48cdf48929c4d6ab",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "oreus_balance_website",
@@ -127,7 +145,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Design"
     ],
     "hash": "e59508ef8a0274ae26ba46e41e3f8eda281e345ee9e48ff4fd7cbec1fb55ec00",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "pinax_app",
@@ -145,7 +163,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "b7063836532359cb83f8f817a42d414e4f46bfedece4e55e34b09a8bb1f318bb",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   },
   {
     "id": "pinax_website",
@@ -162,7 +180,7 @@ const data: DatedCaseStudyMetadata[] = [
       "Frontend"
     ],
     "hash": "ce6479ca7bc3dc5f0f43eff45dc046c0911c7c2c820e1181840f795ace7f4f2c",
-    "last_updated": "2025-09-19"
+    "last_updated": "2025-09-22"
   }
 ];
 
