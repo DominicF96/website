@@ -8,6 +8,7 @@ export interface CaseStudyMetadata {
   url?: string;
   score: number;
   tags: string[];
+  active?: boolean
 }
 
 export interface DatedCaseStudyMetadata extends CaseStudyMetadata {

@@ -50,6 +50,7 @@ function generateCaseStudiesIndex(
             url: metadata.url,
             score: metadata.score,
             tags: metadata.tags,
+            active: metadata.active,
             hash,
             last_updated: lastUpdated,
           };

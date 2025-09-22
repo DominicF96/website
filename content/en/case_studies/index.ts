@@ -34,7 +34,8 @@ const data: DatedCaseStudyMetadata[] = [
       "Problem Solving",
       "Communication"
     ],
-    "hash": "28247f6d91b5a3e141f700735e90a86f4c0eb56329e9d6780911d0720e120196",
+    "active": true,
+    "hash": "0bd8e64a5cf0249173dc8d4e846716dfae71f2d717e14d46ecf461f56fa5a960",
     "last_updated": "2025-09-22"
   },
   {
