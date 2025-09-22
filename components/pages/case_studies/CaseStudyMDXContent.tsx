@@ -42,7 +42,7 @@ export default async function CaseStudyMDXContent({
         <CenteredContainer className="mt-2">
             <div className="grid grid-cols-4">
                 <div className="col-span-1">
-                    <div className="sticky top-24">
+                    <div className="sticky top-24 pb-16">
                         {backHref && backLabel && (
                             <div className="mt-8">
                                 <NavLink href={backHref} className="inline-flex items-center text-primary font-medium group no-underline">
