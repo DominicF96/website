@@ -16,6 +16,7 @@ const en = {
   case_studies: "Case Studies",
   brands: "Brands",
   articles: "Articles",
+  bio: "Bio",
   games: "Games",
   contact: "Contact me",
   secret_found: "🔓 You've unlocked my final form. Félicitations!"
@@ -28,6 +29,7 @@ const fr = {
   case_studies: "Études de cas",
   brands: "Marques",
   articles: "Articles",
+  bio: "Bio",
   games: "Jeux",
   contact: "Contactez-moi",
   secret_found: "🔓 Vous avez débloqué ma forme finale. Félicitations!"

@@ -8,6 +8,7 @@ const navbarLinks = [
   { key: "brands", url: "/brands"},
   { key: "articles", url: "/articles" },
   // { key: "games", url: "/games"},
+  { key: "bio", url: "/bio"},
 ];
 
 export default navbarLinks;
