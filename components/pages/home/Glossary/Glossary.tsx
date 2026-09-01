@@ -40,9 +40,9 @@ function Glossary({}: Props) {
               opacity: 0.4 + keyword.score * 0.4,
               fontWeight: keyword.score >= 1 ? "bold" : "normal",
               // scales with viewport width, capped so it stays sane on desktop
-              fontSize: `clamp(${(0.95 + keyword.score * 0.25).toFixed(2)}rem, ${(
-                4.0 +
-                keyword.score * 1.6
+              fontSize: `clamp(${(1.14 + keyword.score * 0.3).toFixed(2)}rem, ${(
+                4.8 +
+                keyword.score * 1.92
               ).toFixed(2)}vw, ${(1.15 + keyword.score * 0.55).toFixed(2)}rem)`,
             }}
           >

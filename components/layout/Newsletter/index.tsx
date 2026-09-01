@@ -16,7 +16,12 @@ type Props = {
 
 function Newsletter({ locale }: Props) {
   const t = i18n[locale];
-  const newsletterRef = useRef<HTMLDivElement>(null); // Ref for the newsletter div
+  // Two refs on purpose. The wrapper is never transformed, so it is the only
+  // stable thing to measure. Measuring the card itself fed its own transform
+  // back into the next calculation, which settled at a fixed point and froze
+  // the animation.
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const newsletterRef = useRef<HTMLDivElement>(null);
   const [email, setEmail] = useState("");
   const emailRe =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -63,30 +68,31 @@ function Newsletter({ locale }: Props) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (newsletterRef.current) {
-        const newsletterPosition =
-          newsletterRef.current.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        const visibleArea = newsletterPosition - windowHeight;
+      const wrapper = wrapperRef.current;
+      const card = newsletterRef.current;
+      if (!wrapper || !card) return;
 
-        // Adjust scale based on visibility
-        let scale, translateY;
-        if (visibleArea < 0) {
-          // Calculate the percentage of the newsletter that is visible
-          let visiblePercentage = newsletterPosition / windowHeight;
-          scale = 0.8 + 0.6 * (1 - visiblePercentage);
-          translateY = 350 * (1 - visiblePercentage) - 500; // Adjust Y position based on visibility
-        } else {
-          scale = 0.8; // Default scale when not in viewport
-          translateY = -500; // No translation when not in viewport
-        }
+      // Measured on the untransformed wrapper, so the result never depends on
+      // the transform we are about to write.
+      const wrapperTop = wrapper.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-        newsletterRef.current.style.transform = `scale(${Math.min(
-          Math.max(scale, 0.8),
-          1.1
-        )}) translateY(${translateY}px)`;
-        newsletterRef.current.style.opacity = `${Math.max(scale - 0.2, 0.6)}`;
+      let scale: number;
+      let translateY: number;
+      if (wrapperTop < windowHeight) {
+        // 0 when the wrapper reaches the top of the viewport, 1 when it is
+        // just entering from the bottom.
+        const visiblePercentage = Math.max(wrapperTop / windowHeight, 0);
+        scale = 0.8 + 0.6 * (1 - visiblePercentage);
+        translateY = 350 * (1 - visiblePercentage) - 500;
+      } else {
+        scale = 0.8;
+        translateY = -500;
       }
+
+      const clamped = Math.min(Math.max(scale, 0.8), 1.1);
+      card.style.transform = `scale(${clamped}) translateY(${translateY}px)`;
+      card.style.opacity = `${Math.max(clamped - 0.2, 0.6)}`;
     };
 
     // Run once on mount: without this the card has no transform at all until
@@ -105,9 +111,10 @@ function Newsletter({ locale }: Props) {
 
   return (
     <CenteredContainer>
+      <div ref={wrapperRef} className="mt-56 mb-32">
       <div
         ref={newsletterRef}
-        className="relative z-10 mt-56 mb-32 bg-primary text-background rounded-xl will-change-transform"
+        className="relative z-10 bg-primary text-background rounded-xl will-change-transform"
       >
         <Image
           src="/vectors/envelope.svg"
@@ -172,6 +179,7 @@ function Newsletter({ locale }: Props) {
             </div>
           )}
         </div>
+      </div>
       </div>
     </CenteredContainer>
   );
