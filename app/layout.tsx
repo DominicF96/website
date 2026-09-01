@@ -15,7 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <ViewTransitions>
-      <html lang="en" className={jetbrainsMono.className}>
+      <html
+        lang="en"
+        className={jetbrainsMono.className}
+        // next-themes writes the theme class onto <html> on the client, which
+        // never matches what the server rendered. This is the documented fix.
+        suppressHydrationWarning
+      >
         <body>
           <ClientProviders>{children}</ClientProviders>
           <div className="hidden md:block">

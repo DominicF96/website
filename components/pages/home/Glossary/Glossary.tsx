@@ -8,6 +8,12 @@ type Props = {};
 // so nothing here can widen the page or introduce horizontal scrolling.
 const BLEED_VW = 130;
 
+// Below the `sm` breakpoint only the first half of the list renders, so the
+// cloud fits its fixed height without any term being cut off. The list is
+// sorted by score, so the half that survives is the product, design and AI
+// vocabulary rather than the tool inventory.
+const MOBILE_RATIO = 0.5;
+
 function Glossary({}: Props) {
   // copy before sorting: GLOSSARY is a shared module import
   const sortedGlossary = [...GLOSSARY].sort((a, b) => {
@@ -19,22 +25,26 @@ function Glossary({}: Props) {
     return a.name.localeCompare(b.name);
   });
 
+  const mobileCount = Math.ceil(sortedGlossary.length * MOBILE_RATIO);
+
   return (
     <div
       className="relative w-screen max-w-[100vw] overflow-x-hidden mt-4 py-1"
       style={{ marginLeft: "calc(50% - 50vw)" }}
     >
       <div
-        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply text-muted-foreground"
+        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply text-muted-foreground h-auto sm:h-[640px] overflow-visible sm:overflow-hidden"
         style={{
           width: `${BLEED_VW}vw`,
           marginLeft: `${(100 - BLEED_VW) / 2}vw`,
         }}
       >
-        {sortedGlossary.map((keyword) => (
+        {sortedGlossary.map((keyword, index) => (
           <div
             key={`keyword_${keyword.name}`}
-            className="inline-block whitespace-nowrap"
+            className={`whitespace-nowrap ${
+              index < mobileCount ? "inline-block" : "hidden sm:inline-block"
+            }`}
             style={{
               // floor the opacity: fully transparent text reads as keyword stuffing
               opacity: 0.4 + keyword.score * 0.4,
