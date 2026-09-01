@@ -81,9 +81,9 @@ function Newsletter({ locale }: Props) {
       // wrapper enters the viewport. Progress therefore starts counting from
       // the moment the CARD would appear, not the wrapper: otherwise it sits
       // frozen on screen for the whole length of that offset.
-      const START_Y = -190; // where the card sits as it first appears
-      const PEAK_Y = -330; // highest point, noses over the lower glossary
-      const END_Y = -150; // resting position, down by the contact form
+      const START_Y = -100; // where the card sits as it first appears
+      const PEAK_Y = -250; // highest point, noses over the lower glossary
+      const END_Y = -60; // resting position, down by the contact form
 
       // Fraction of the travel spent on the fast opening move.
       const FAST = 0.25;
