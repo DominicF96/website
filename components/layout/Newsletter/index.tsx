@@ -77,22 +77,21 @@ function Newsletter({ locale }: Props) {
       const wrapperTop = wrapper.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      let scale: number;
-      let translateY: number;
-      if (wrapperTop < windowHeight) {
-        // 0 when the wrapper reaches the top of the viewport, 1 when it is
-        // just entering from the bottom.
-        const visiblePercentage = Math.max(wrapperTop / windowHeight, 0);
-        scale = 0.8 + 0.6 * (1 - visiblePercentage);
-        translateY = 350 * (1 - visiblePercentage) - 500;
-      } else {
-        scale = 0.8;
-        translateY = -500;
-      }
+      // Single progress value: 0 while the card is still below the fold, 1 once
+      // its wrapper has reached the top of the viewport. Clamping here means no
+      // branch is needed for the off-screen case.
+      const progress = Math.min(Math.max(1 - wrapperTop / windowHeight, 0), 1);
 
-      const clamped = Math.min(Math.max(scale, 0.8), 1.1);
-      card.style.transform = `scale(${clamped}) translateY(${translateY}px)`;
-      card.style.opacity = `${Math.max(clamped - 0.2, 0.6)}`;
+      // Reaches full size at ~33% of the travel, up from 50%.
+      const scale = Math.min(0.8 + 0.9 * progress, 1.1);
+      // Starts 700px high, further over the glossary, and drops 550px to land
+      // on the same -150px it always ended at.
+      const translateY = -700 + 550 * progress;
+      // Fully opaque by ~20% of the travel; it used to top out at 0.9.
+      const opacity = Math.min(0.6 + 2 * progress, 1);
+
+      card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+      card.style.opacity = `${opacity}`;
     };
 
     // Run once on mount: without this the card has no transform at all until

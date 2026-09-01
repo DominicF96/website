@@ -33,7 +33,7 @@ function Glossary({}: Props) {
       style={{ marginLeft: "calc(50% - 50vw)" }}
     >
       <div
-        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply text-muted-foreground h-auto sm:h-[640px] overflow-visible sm:overflow-hidden"
+        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply text-muted-foreground leading-[1.05] h-auto sm:h-[640px] overflow-visible sm:overflow-hidden"
         style={{
           width: `${BLEED_VW}vw`,
           marginLeft: `${(100 - BLEED_VW) / 2}vw`,

@@ -5,7 +5,7 @@ import { getLocale, getPathnameLocale } from "./middlewares/getLocale";
 
 acceptLanguage.languages(Array.from(locales));
 
-export default function middleware(req: NextRequest) {
+export default function proxy(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
   const searchParams = req.nextUrl.search; // Get search parameters
 
