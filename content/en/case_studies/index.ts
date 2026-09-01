@@ -62,7 +62,6 @@ const data: DatedCaseStudyMetadata[] = [
     "project_type": "Web Application",
     "role": "Full Design",
     "description": "Spyglass brings transparency to blockchain transaction processing before they appear on public networks, thanks to direct integration with indexers.",
-    "url": "https://spyglass.network",
     "score": 4,
     "tags": [
       "Web3, Blockchain",

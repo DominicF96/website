@@ -11,16 +11,16 @@ export interface I18n {
 }
 
 export const en = {
-  title: "Frontend, Designer, PO • Dominic Fournier",
+  title: "Dominic Fournier • Product Manager, Design Lead",
   description: (years: number | string) =>
-    `With over ${years} years of experience in Product Design and Frontend development, I specialize in coordinating Agile teams to build intuitive, feature-rich dashboards and websites.`,
-  keywords: "Portfolio, Dominic, Fournier, Developer, Designer, Product Owner",
+    `With over ${years} years across product management, design, and frontend development, I lead teams to build intuitive, feature-rich digital products.`,
+  keywords: "Portfolio, Dominic, Fournier, Product Manager, Design Lead, Product Designer, Frontend",
 };
 
 export const fr = {
-  title: "Frontend, Designer, PO • Dominic Fournier",
+  title: "Dominic Fournier • Product Manager, Design Lead",
   description: (years: number | string) =>
-    `Avec plus de ${years} ans d'expérience en design de produit et développement Frontend, je me spécialise dans la coordination d'équipes Agiles pour construire des tableaux de bord et des sites web intuitifs et riches en fonctionnalités.`,
+    `Avec plus de ${years} années en gestion de produit, design et développement Frontend, je dirige des équipes pour construire des produits numériques intuitifs et riches en fonctionnalités.`,
   keywords:
-    "Portfolio, Dominic, Fournier, Développeur, Designer, Product Owner",
+    "Portfolio, Dominic, Fournier, Gestionnaire de produit, Responsable design, Designer produit, Frontend",
 };

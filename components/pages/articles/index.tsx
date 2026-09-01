@@ -30,12 +30,14 @@ const articlesDataMap: Record<Locale, DatedArticleMetadata[]> = {
 const ArticlesList: React.FC<ArticlesListProps> = ({ locale }) => {
     const t = i18n[locale];
     //   const [search, setSearch] = useState("");
-    const [articles, setArticles] = useState<DatedArticleMetadata[]>([]);
+    const [articles, setArticles] = useState<DatedArticleMetadata[]>(() =>
+        [...articlesDataMap[locale]].sort((a, b) => (b.date > a.date ? 1 : -1))
+    );
     //   const [sortMode, setSortMode] = useState<'title' | 'score' | 'date'>("score");
 
     useEffect(() => {
         const articlesData = articlesDataMap[locale];
-        setArticles(articlesData.sort((a,b) => b.date > a.date ? 1 : -1));
+        setArticles([...articlesData].sort((a, b) => (b.date > a.date ? 1 : -1)));
     }, [locale]);
 
     const filteredArticles = articles;

@@ -30,7 +30,7 @@ const caseStudyDataMap: Record<Locale, DatedCaseStudyMetadata[]> = {
 const CaseStudyList: React.FC<CaseStudyListProps> = ({ locale }) => {
   const t = i18n[locale];
   const [search, setSearch] = useState("");
-  const [caseStudies, setCaseStudies] = useState<DatedCaseStudyMetadata[]>([]);
+  const [caseStudies, setCaseStudies] = useState<DatedCaseStudyMetadata[]>(() => caseStudyDataMap[locale]);
   const [sortMode, setSortMode] = useState<'title' | 'score' | 'date'>("date");
 
   useEffect(() => {

@@ -22,12 +22,12 @@ const en = {
     part_2: "Dominic",
   },
   title: {
-    part_1: "Frontend Developer,",
-    part_2: "Product Designer",
+    part_1: "Product Manager,",
+    part_2: "Design Lead",
     part_2_secret: "Machine"
   },
   description: (years: number | string) =>
-    `With over ${years} years of experience in Frontend development, management, and product design, I help teams turn complex challenges into intuitive, high-performing digital products.`,
+    `With over ${years} years across product management, design, and frontend development, I help teams turn complex challenges into intuitive, high-performing digital products.`,
   cta: {
     primary: "Contact me",
     secondary: "Projects",
@@ -41,12 +41,12 @@ const fr = {
     part_2: "Dominic",
   },
   title: {
-    part_1: "Développeur Frontend,",
-    part_2: "Designer Produit",
+    part_1: "Gestionnaire de produit,",
+    part_2: "Responsable design",
     part_2_secret: "Machine"
   },
   description: (years: number | string) =>
-    `Avec plus de ${years} années d'expérience en développement Frontend, gestion et design produit, j'aide les équipes à transformer des défis complexes en produits numériques intuitifs et performants.`,
+    `Avec plus de ${years} années en gestion de produit, design et développement Frontend, j'aide les équipes à transformer des défis complexes en produits numériques intuitifs et performants.`,
   cta: {
     primary: "Contactez-moi",
     secondary: "Projets",
