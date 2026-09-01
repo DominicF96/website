@@ -40,7 +40,10 @@ function Glossary({}: Props) {
   // scattered alphabetically. Sorting by score was what broke the grouping.
   return (
     <div
-      className="relative w-screen max-w-[100vw] overflow-x-hidden mt-4 py-1"
+      // overflow-x-clip, not hidden: when one axis is `hidden` and the other is
+      // `visible`, CSS promotes the visible one to `auto`, which quietly clips the
+      // terms displaced upward and can add a scrollbar. `clip` does not do that.
+      className="relative w-screen max-w-[100vw] overflow-x-clip overflow-y-visible mt-4 py-1"
       style={{ marginLeft: "calc(50% - 50vw)" }}
     >
       <div
