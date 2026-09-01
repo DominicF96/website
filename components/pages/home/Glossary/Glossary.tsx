@@ -15,7 +15,7 @@ function Glossary({}: Props) {
   });
 
   return (
-    <div className="flex flex-row justify-center flex-wrap gap-x-3 gap-y-1 sm:gap-x-6 sm:gap-y-2 mt-4 mix-blend-multiply max-h-[420px] sm:max-h-[560px] overflow-hidden py-1 text-muted-foreground">
+    <div className="flex flex-row justify-start flex-wrap gap-x-4 gap-y-1 sm:gap-x-6 sm:gap-y-2 mt-4 mix-blend-multiply max-h-[420px] sm:max-h-[560px] overflow-hidden py-1 text-muted-foreground">
       {sortedGlossary.map((keyword) => (
         <div
           key={`keyword_${keyword.name}`}
@@ -24,11 +24,12 @@ function Glossary({}: Props) {
             // floor the opacity: fully transparent text reads as keyword stuffing
             opacity: 0.4 + keyword.score * 0.4,
             fontWeight: keyword.score >= 1 ? "bold" : "normal",
-            // clamp: le vw fait retrecir les termes sur mobile, ou une valeur
-            // fixe debordait horizontalement
-            fontSize: `clamp(${(0.65 + keyword.score * 0.1).toFixed(2)}rem, ${(
-              2.8 +
-              keyword.score * 1.0
+            // clamp: scales with viewport width so the cloud stays readable on
+            // phones. A little horizontal overflow is acceptable; even spacing
+            // between terms matters more.
+            fontSize: `clamp(${(0.85 + keyword.score * 0.2).toFixed(2)}rem, ${(
+              3.4 +
+              keyword.score * 1.4
             ).toFixed(2)}vw, ${(1.0 + keyword.score * 0.6).toFixed(2)}rem)`,
           }}
         >
