@@ -8,57 +8,51 @@ type Props = {};
 // so nothing here can widen the page or introduce horizontal scrolling.
 const BLEED_VW = 130;
 
-// Below the `sm` breakpoint only the first half of the list renders, so the
-// cloud fits its fixed height without any term being cut off. The list is
-// sorted by score, so the half that survives is the product, design and AI
-// vocabulary rather than the tool inventory.
-const MOBILE_RATIO = 0.5;
+// Squaring the weight is what gives the hierarchy its bite. The previous linear
+// ramp separated the three tiers by about 20% in size and 0.22 in opacity,
+// which is below the threshold where an eye reads hierarchy at all, so 131
+// terms arrived as one flat grey mass. Squared, the headline terms come out
+// roughly twice the size and nearly three times the contrast of the context
+// terms, and the eye lands on them first.
+const sizeRem = (score: number) => 0.9 + 1.5 * score * score;
+const opacityOf = (score: number) => 0.3 + 0.7 * score * score;
 
 function Glossary({}: Props) {
-  // copy before sorting: GLOSSARY is a shared module import
-  const sortedGlossary = [...GLOSSARY].sort((a, b) => {
-    // Compare by score
-    if (a.score > b.score) return -1;
-    if (a.score < b.score) return 1;
-
-    // If scores are equal, compare alphabetically by name
-    return a.name.localeCompare(b.name);
-  });
-
-  const mobileCount = Math.ceil(sortedGlossary.length * MOBILE_RATIO);
-
+  // No sorting. Source order is category order (product, design, AI,
+  // leadership, tech), so related terms cluster together instead of being
+  // scattered alphabetically. Sorting by score was what broke the grouping.
   return (
     <div
       className="relative w-screen max-w-[100vw] overflow-x-hidden mt-4 py-1"
       style={{ marginLeft: "calc(50% - 50vw)" }}
     >
       <div
-        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply text-muted-foreground leading-[1.05] h-auto sm:h-[640px] overflow-visible sm:overflow-hidden"
+        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-7 sm:gap-y-2 mix-blend-multiply text-muted-foreground leading-[1.05]"
         style={{
           width: `${BLEED_VW}vw`,
           marginLeft: `${(100 - BLEED_VW) / 2}vw`,
         }}
       >
-        {sortedGlossary.map((keyword, index) => (
-          <div
-            key={`keyword_${keyword.name}`}
-            className={`whitespace-nowrap ${
-              index < mobileCount ? "inline-block" : "hidden sm:inline-block"
-            }`}
-            style={{
-              // floor the opacity: fully transparent text reads as keyword stuffing
-              opacity: 0.4 + keyword.score * 0.4,
-              fontWeight: keyword.score >= 1 ? "bold" : "normal",
-              // scales with viewport width, capped so it stays sane on desktop
-              fontSize: `clamp(${(1.14 + keyword.score * 0.3).toFixed(2)}rem, ${(
-                4.8 +
-                keyword.score * 1.92
-              ).toFixed(2)}vw, ${(1.15 + keyword.score * 0.55).toFixed(2)}rem)`,
-            }}
-          >
-            {keyword.name.toLocaleUpperCase()}
-          </div>
-        ))}
+        {GLOSSARY.map((keyword) => {
+          const rem = sizeRem(keyword.score);
+          return (
+            <div
+              key={`keyword_${keyword.name}`}
+              className="inline-block whitespace-nowrap"
+              style={{
+                opacity: opacityOf(keyword.score),
+                fontWeight: keyword.score >= 1 ? "bold" : "normal",
+                // Scales with viewport width on small screens, capped at the
+                // desktop size above.
+                fontSize: `clamp(${(rem * 0.62).toFixed(2)}rem, ${(
+                  rem * 2.9
+                ).toFixed(2)}vw, ${rem.toFixed(2)}rem)`,
+              }}
+            >
+              {keyword.name.toLocaleUpperCase()}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
