@@ -6,7 +6,7 @@ type Props = {};
 // The cloud is deliberately wider than the viewport so terms bleed off both
 // edges. The outer element is pinned to exactly 100vw and clips the overflow,
 // so nothing here can widen the page or introduce horizontal scrolling.
-const BLEED_VW = 112;
+const BLEED_VW = 130;
 
 function Glossary({}: Props) {
   // copy before sorting: GLOSSARY is a shared module import
@@ -21,11 +21,11 @@ function Glossary({}: Props) {
 
   return (
     <div
-      className="relative w-screen max-w-[100vw] overflow-x-hidden overflow-y-hidden mt-4 py-1"
+      className="relative w-screen max-w-[100vw] overflow-x-hidden mt-4 py-1"
       style={{ marginLeft: "calc(50% - 50vw)" }}
     >
       <div
-        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply max-h-[420px] sm:max-h-[560px] text-muted-foreground"
+        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply text-muted-foreground"
         style={{
           width: `${BLEED_VW}vw`,
           marginLeft: `${(100 - BLEED_VW) / 2}vw`,
