@@ -1,202 +1,150 @@
 export const GLOSSARY = [
   {
-    name: "HTML",
-    score: 1,
+    name: "Product Strategy",
+    score: 1.0,
   },
   {
-    name: "Insomnia",
-    score: 1,
+    name: "Product Management",
+    score: 1.0,
   },
   {
-    name: "JSON",
-    score: 1,
+    name: "Roadmapping",
+    score: 1.0,
   },
   {
-    name: "NPM",
-    score: 1,
+    name: "OKRs",
+    score: 1.0,
   },
   {
-    name: "SPA",
-    score: 1,
+    name: "KPIs",
+    score: 1.0,
   },
   {
-    name: "CSS",
-    score: 1,
+    name: "Discovery",
+    score: 1.0,
   },
   {
-    name: "GitHub",
-    score: 1,
+    name: "Design Systems",
+    score: 1.0,
   },
   {
-    name: "React",
-    score: 1,
+    name: "Design Tokens",
+    score: 1.0,
   },
   {
-    name: "Agile",
-    score: 1,
+    name: "Accessibility",
+    score: 1.0,
   },
   {
-    name: "Git",
-    score: 1,
+    name: "UX Design",
+    score: 1.0,
   },
   {
-    name: "JavaScript",
-    score: 1,
+    name: "UI Design",
+    score: 1.0,
   },
   {
-    name: "Next.js",
-    score: 1,
+    name: "AI-Assisted Development",
+    score: 1.0,
   },
   {
-    name: "TypeScript",
-    score: 1,
+    name: "Agentic Workflows",
+    score: 1.0,
+  },
+  {
+    name: "Team Leadership",
+    score: 1.0,
   },
   {
     name: "Figma",
-    score: 1,
+    score: 1.0,
   },
   {
-    name: "Jira",
-    score: 1,
+    name: "TypeScript",
+    score: 1.0,
   },
   {
-    name: "Material UI",
-    score: 1,
+    name: "React",
+    score: 1.0,
   },
   {
-    name: "REST",
-    score: 1,
-  },
-  {
-    name: "SSG",
-    score: 1,
-  },
-  {
-    name: "SSR",
-    score: 1,
+    name: "Next.js",
+    score: 1.0,
   },
   {
     name: "Storybook",
-    score: 1,
+    score: 1.0,
   },
   {
-    name: "Vercel",
-    score: 1,
+    name: "Agile",
+    score: 1.0,
   },
   {
-    name: "Lighthouse",
-    score: 1,
+    name: "User Research",
+    score: 0.7,
   },
   {
-    name: "Sass",
-    score: 1,
+    name: "Competitive Analysis",
+    score: 0.7,
   },
   {
-    name: "CSS Grid",
-    score: 0.9,
+    name: "User Stories",
+    score: 0.7,
   },
   {
-    name: "Flexbox",
-    score: 0.9,
+    name: "Requirements Gathering",
+    score: 0.7,
   },
   {
-    name: "Markdown",
-    score: 0.9,
+    name: "Backlog",
+    score: 0.7,
   },
   {
-    name: "Tailwind CSS",
-    score: 0.9,
+    name: "Prioritization",
+    score: 0.7,
   },
   {
-    name: "Firebase",
-    score: 0.9,
+    name: "Sprint Planning",
+    score: 0.7,
   },
   {
-    name: "Node.js",
-    score: 0.9,
-  },
-  {
-    name: "Dependabot",
-    score: 0.8,
-  },
-  {
-    name: "CSV",
-    score: 0.8,
-  },
-  {
-    name: "DevTools",
-    score: 0.8,
-  },
-  {
-    name: "Jest",
-    score: 0.8,
-  },
-  {
-    name: "JSDoc",
-    score: 0.8,
-  },
-  {
-    name: "Knex.js",
-    score: 0.8,
-  },
-  {
-    name: "React Hooks",
-    score: 0.8,
-  },
-  {
-    name: "Redux",
-    score: 0.8,
+    name: "Kanban",
+    score: 0.7,
   },
   {
     name: "Scrum",
-    score: 0.8,
-  },
-  {
-    name: "XML",
-    score: 0.8,
-  },
-  {
-    name: "Yarn",
-    score: 0.8,
-  },
-  {
-    name: "Code Splitting",
-    score: 0.8,
-  },
-  {
-    name: "Lazy Loading",
-    score: 0.8,
-  },
-  {
-    name: "PostgreSQL",
-    score: 0.8,
-  },
-  {
-    name: "Bitbucket",
     score: 0.7,
   },
   {
-    name: "Context API",
+    name: "Product Vision",
     score: 0.7,
   },
   {
-    name: "Custom Hooks",
+    name: "Stakeholder Management",
     score: 0.7,
   },
   {
-    name: "GitLab",
+    name: "Cross-functional Leadership",
     score: 0.7,
   },
   {
-    name: "HOC",
+    name: "Product Discovery",
     score: 0.7,
   },
   {
-    name: "Postman",
+    name: "Feature Prioritization",
     score: 0.7,
   },
   {
-    name: "SVG",
+    name: "Jira",
+    score: 0.7,
+  },
+  {
+    name: "Confluence",
+    score: 0.7,
+  },
+  {
+    name: "Notion",
     score: 0.7,
   },
   {
@@ -204,323 +152,375 @@ export const GLOSSARY = [
     score: 0.7,
   },
   {
+    name: "Information Architecture",
+    score: 0.7,
+  },
+  {
+    name: "User Flows",
+    score: 0.7,
+  },
+  {
+    name: "Wireframing",
+    score: 0.7,
+  },
+  {
+    name: "Prototyping",
+    score: 0.7,
+  },
+  {
+    name: "Interaction Design",
+    score: 0.7,
+  },
+  {
+    name: "Visual Design",
+    score: 0.7,
+  },
+  {
+    name: "Component Library",
+    score: 0.7,
+  },
+  {
+    name: "Responsive Design",
+    score: 0.7,
+  },
+  {
+    name: "Usability",
+    score: 0.7,
+  },
+  {
+    name: "Brand Identity",
+    score: 0.7,
+  },
+  {
+    name: "Design Critique",
+    score: 0.7,
+  },
+  {
+    name: "Design Ops",
+    score: 0.7,
+  },
+  {
+    name: "WCAG",
+    score: 0.7,
+  },
+  {
+    name: "Figma Variables",
+    score: 0.7,
+  },
+  {
+    name: "Low-Fidelity Mockups",
+    score: 0.7,
+  },
+  {
+    name: "High-Fidelity Mockups",
+    score: 0.7,
+  },
+  {
+    name: "Mentoring",
+    score: 0.7,
+  },
+  {
+    name: "Coaching",
+    score: 0.7,
+  },
+  {
+    name: "Hiring",
+    score: 0.7,
+  },
+  {
+    name: "Technical Documentation",
+    score: 0.7,
+  },
+  {
+    name: "Stakeholder Communication",
+    score: 0.7,
+  },
+  {
+    name: "Claude",
+    score: 0.7,
+  },
+  {
+    name: "Cursor",
+    score: 0.7,
+  },
+  {
+    name: "LLM",
+    score: 0.7,
+  },
+  {
+    name: "Prompt Engineering",
+    score: 0.7,
+  },
+  {
+    name: "AI Agents",
+    score: 0.7,
+  },
+  {
+    name: "Workflow Automation",
+    score: 0.7,
+  },
+  {
+    name: "Tailwind",
+    score: 0.7,
+  },
+  {
+    name: "shadcn/ui",
+    score: 0.7,
+  },
+  {
+    name: "Sass",
+    score: 0.7,
+  },
+  {
     name: "Angular",
     score: 0.7,
   },
   {
-    name: "SQL",
+    name: "Redux",
     score: 0.7,
   },
   {
-    name: "Blender",
+    name: "REST",
     score: 0.7,
-  },
-  {
-    name: "Adobe XD",
-    score: 0.6,
-  },
-  {
-    name: "Canvas",
-    score: 0.6,
-  },
-  {
-    name: "ESLint",
-    score: 0.6,
-  },
-  {
-    name: "ngrok",
-    score: 0.6,
-  },
-  {
-    name: "React Suspense",
-    score: 0.6,
-  },
-  {
-    name: "Recoil",
-    score: 0.6,
-  },
-  {
-    name: "Redux Toolkit",
-    score: 0.6,
-  },
-  {
-    name: "Sequelize",
-    score: 0.6,
-  },
-  {
-    name: "Swagger",
-    score: 0.6,
-  },
-  {
-    name: "YAML",
-    score: 0.6,
-  },
-  {
-    name: "GitHub Actions",
-    score: 0.6,
-  },
-  {
-    name: "Google Analytics",
-    score: 0.6,
-  },
-  {
-    name: "React Testing Library",
-    score: 0.6,
-  },
-  {
-    name: "Bootstrap",
-    score: 0.5,
-  },
-  {
-    name: "Chakra UI",
-    score: 0.5,
-  },
-  {
-    name: "Gatsby",
-    score: 0.5,
-  },
-  {
-    name: "Headless CMS",
-    score: 0.5,
-  },
-  {
-    name: "Prettier",
-    score: 0.5,
-  },
-  {
-    name: "React Hook Form",
-    score: 0.5,
-  },
-  {
-    name: "React Router",
-    score: 0.5,
-  },
-  {
-    name: "Cypress",
-    score: 0.5,
-  },
-  {
-    name: "Husky",
-    score: 0.5,
-  },
-  {
-    name: "Mocha",
-    score: 0.5,
-  },
-  {
-    name: "Chai",
-    score: 0.4,
-  },
-  {
-    name: "CircleCI",
-    score: 0.4,
-  },
-  {
-    name: "Docker",
-    score: 0.4,
-  },
-  {
-    name: "Firebase Firestore",
-    score: 0.4,
-  },
-  {
-    name: "Jenkins",
-    score: 0.4,
-  },
-  {
-    name: "MongoDB",
-    score: 0.4,
-  },
-  {
-    name: "Rollup",
-    score: 0.4,
-  },
-  {
-    name: "Styled Components",
-    score: 0.4,
-  },
-  {
-    name: "Travis CI",
-    score: 0.4,
-  },
-  {
-    name: "Three.js",
-    score: 0.4,
-  },
-  {
-    name: "Ant Design",
-    score: 0.3,
-  },
-  {
-    name: "Heroku",
-    score: 0.3,
-  },
-  {
-    name: "Lint-staged",
-    score: 0.3,
-  },
-  {
-    name: "Lottie",
-    score: 0.3,
-  },
-  {
-    name: "OpenAPI",
-    score: 0.3,
-  },
-  {
-    name: "Serverless Framework",
-    score: 0.3,
-  },
-  {
-    name: "Strapi",
-    score: 0.3,
-  },
-  {
-    name: "Framer",
-    score: 0.3,
-  },
-  {
-    name: "Algolia",
-    score: 0.2,
-  },
-  {
-    name: "AWS",
-    score: 0.2,
-  },
-  {
-    name: "Azure",
-    score: 0.2,
-  },
-  {
-    name: "Contentful",
-    score: 0.2,
-  },
-  {
-    name: "Elasticsearch",
-    score: 0.2,
-  },
-  {
-    name: "Electron",
-    score: 0.2,
-  },
-  {
-    name: "Emotion",
-    score: 0.2,
-  },
-  {
-    name: "Expo",
-    score: 0.2,
-  },
-  {
-    name: "Grafana",
-    score: 0.2,
-  },
-  {
-    name: "GSAP",
-    score: 0.2,
-  },
-  {
-    name: "Jasmine",
-    score: 0.2,
-  },
-  {
-    name: "Kubernetes",
-    score: 0.2,
-  },
-  {
-    name: "Netlify",
-    score: 0.2,
-  },
-  {
-    name: "React Native",
-    score: 0.2,
-  },
-  {
-    name: "Redis",
-    score: 0.2,
-  },
-  {
-    name: "Sanity",
-    score: 0.2,
-  },
-  {
-    name: "Vercel Serverless Functions",
-    score: 0.2,
-  },
-  {
-    name: "Vite",
-    score: 0.2,
-  },
-  {
-    name: "Vue.js",
-    score: 0.2,
-  },
-  {
-    name: "WebGL",
-    score: 0.2,
-  },
-  {
-    name: "Babel",
-    score: 0.1,
-  },
-  {
-    name: "BEM",
-    score: 0.1,
-  },
-  {
-    name: "Chart.js",
-    score: 0.1,
-  },
-  {
-    name: "CSS Modules",
-    score: 0.1,
-  },
-  {
-    name: "D3.js",
-    score: 0.1,
   },
   {
     name: "GraphQL",
-    score: 0.1,
+    score: 0.7,
   },
   {
-    name: "Prometheus",
-    score: 0.1,
+    name: "Node.js",
+    score: 0.7,
   },
   {
-    name: "Protobuf",
-    score: 0.1,
+    name: "Express.js",
+    score: 0.7,
   },
   {
-    name: "PWA",
-    score: 0.1,
+    name: "PostgreSQL",
+    score: 0.7,
   },
   {
-    name: "React Concurrent Mode",
-    score: 0.1,
+    name: "Firebase",
+    score: 0.7,
   },
   {
-    name: "Service Workers",
-    score: 0.1,
+    name: "Git",
+    score: 0.7,
   },
   {
-    name: "Sketch",
-    score: 0.1,
+    name: "Vercel",
+    score: 0.7,
   },
   {
-    name: "TOML",
-    score: 0.1,
+    name: "Docker",
+    score: 0.7,
   },
   {
-    name: "Tree Shaking",
-    score: 0.1,
+    name: "AWS",
+    score: 0.7,
   },
   {
-    name: "VirtualBox",
-    score: 0.1,
+    name: "Three.js",
+    score: 0.7,
+  },
+  {
+    name: "Python",
+    score: 0.7,
+  },
+  {
+    name: "Strapi",
+    score: 0.7,
+  },
+  {
+    name: "Embedded Systems",
+    score: 0.7,
+  },
+  {
+    name: "Arduino",
+    score: 0.7,
+  },
+  {
+    name: "Electronics",
+    score: 0.7,
+  },
+  {
+    name: "HTML",
+    score: 0.45,
+  },
+  {
+    name: "CSS",
+    score: 0.45,
+  },
+  {
+    name: "CSS Grid",
+    score: 0.45,
+  },
+  {
+    name: "Flexbox",
+    score: 0.45,
+  },
+  {
+    name: "Material UI",
+    score: 0.45,
+  },
+  {
+    name: "GSAP",
+    score: 0.45,
+  },
+  {
+    name: "JavaScript",
+    score: 0.45,
+  },
+  {
+    name: "React Hooks",
+    score: 0.45,
+  },
+  {
+    name: "Context API",
+    score: 0.45,
+  },
+  {
+    name: "React Router",
+    score: 0.45,
+  },
+  {
+    name: "Redux Toolkit",
+    score: 0.45,
+  },
+  {
+    name: "React Testing Library",
+    score: 0.45,
+  },
+  {
+    name: "React Native",
+    score: 0.45,
+  },
+  {
+    name: "Vite",
+    score: 0.45,
   },
   {
     name: "Webpack",
-    score: 0.1,
+    score: 0.45,
+  },
+  {
+    name: "Jest",
+    score: 0.45,
+  },
+  {
+    name: "Cypress",
+    score: 0.45,
+  },
+  {
+    name: "ESLint",
+    score: 0.45,
+  },
+  {
+    name: "Prettier",
+    score: 0.45,
+  },
+  {
+    name: "GitHub",
+    score: 0.45,
+  },
+  {
+    name: "GitLab",
+    score: 0.45,
+  },
+  {
+    name: "GitHub Actions",
+    score: 0.45,
+  },
+  {
+    name: "Kubernetes",
+    score: 0.45,
+  },
+  {
+    name: "MongoDB",
+    score: 0.45,
+  },
+  {
+    name: "Redis",
+    score: 0.45,
+  },
+  {
+    name: "Elasticsearch",
+    score: 0.45,
+  },
+  {
+    name: "Prisma",
+    score: 0.45,
+  },
+  {
+    name: "OpenAPI",
+    score: 0.45,
+  },
+  {
+    name: "Swagger",
+    score: 0.45,
+  },
+  {
+    name: "Postman",
+    score: 0.45,
+  },
+  {
+    name: "JSON",
+    score: 0.45,
+  },
+  {
+    name: "YAML",
+    score: 0.45,
+  },
+  {
+    name: "Markdown",
+    score: 0.45,
+  },
+  {
+    name: "Headless CMS",
+    score: 0.45,
+  },
+  {
+    name: "Contentful",
+    score: 0.45,
+  },
+  {
+    name: "Google Analytics",
+    score: 0.45,
+  },
+  {
+    name: "SSR",
+    score: 0.45,
+  },
+  {
+    name: "SSG",
+    score: 0.45,
+  },
+  {
+    name: "PWA",
+    score: 0.45,
+  },
+  {
+    name: "Lighthouse",
+    score: 0.45,
+  },
+  {
+    name: "SVG",
+    score: 0.45,
+  },
+  {
+    name: "WebGL",
+    score: 0.45,
+  },
+  {
+    name: "Chart.js",
+    score: 0.45,
+  },
+  {
+    name: "D3.js",
+    score: 0.45,
+  },
+  {
+    name: "Sketch",
+    score: 0.45,
   },
 ];

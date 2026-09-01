@@ -1,61 +1,58 @@
+export interface Section {
+  title: string;
+  description: string;
+}
+
 export interface I18n {
-  frontend: {
-    title: string;
-    description: string;
-  };
-  ux: {
-    title: string;
-    description: string;
-  };
-  team_player: {
-    title: string;
-    description: string;
-  };
+  product: Section;
+  design: Section;
+  strategy: Section;
+  frontend: Section;
 }
 
 const en = {
+  product: {
+    title: "Product & Delivery",
+    description:
+      "I own roadmaps and set the objectives and metrics that go with them. I run Agile delivery, prioritize against real constraints, and keep engineering, design and business pointed at the same thing. I've led a team of 5 developers, run hiring, and supervised 8 student project teams.",
+  },
+  design: {
+    title: "Design & Design Systems",
+    description:
+      "I work in Figma from low fidelity through to production specs, and I build design systems developers actually adopt: components, tokens and documented guidelines. Most of my work is dense, complex interfaces where accessibility and business logic constrain every screen.",
+  },
+  strategy: {
+    title: "Strategy & Advisory",
+    description:
+      "I bring a wider perspective than the daily task list, which is what has let me advise executives and partners directly. Having co-founded a company and helped build another, I've had to scope against real constraints rather than ideal ones.",
+  },
   frontend: {
-    title: "Frontend Expertise",
+    title: "Frontend & AI Tooling",
     description:
-      "Over the years, I've developed strong expertise in Frontend development, mastering modern technologies such as Next.js, React, TypeScript, SASS, and Storybook. Working in startups with versatile roles, I've also learned to collaborate effectively and contribute on the backend.",
-  },
-  project_management: {
-    title: "Project Management",
-    description:
-      "I set objectives aligned with the company's vision and lead technical teams to deliver on them. I coordinate efforts, streamline communication, and drive projects forward, with experience managing up to 20 collaborators across several teams in a dynamic startup environment.",
-  },
-  digital_strategy: {
-    title: "Digital Strategy",
-    description:
-      "I approach every role with dedication and a broader perspective beyond daily tasks, which has allowed me to guide executives and partners effectively; something I thrive on and that others consistently value in my skillset.",
-  },
-  ux: {
-    title: "UI & UX",
-    description:
-      "I have extensive experience creating low- and high-fidelity mockups in Figma, enabling rapid idea visualization and smooth collaboration with development teams. I design effective user experiences by balancing technical constraints, deadlines, and UX quality.",
+      "I write production frontend in Next.js, React and TypeScript, so I can prototype an idea, challenge a feasibility claim, and hand developers something buildable. Most of that work now runs through AI-assisted and agentic workflows, including the internal tooling I build for myself.",
   },
 };
 
 const fr = {
+  product: {
+    title: "Produit et livraison",
+    description:
+      "Je pilote la feuille de route et définis les objectifs et les indicateurs qui l'accompagnent. Je mène la livraison en Agile, priorise en fonction des contraintes réelles et garde le développement, le design et les affaires alignés sur la même cible. J'ai dirigé une équipe de 5 développeurs, piloté l'embauche et encadré 8 équipes projet étudiantes.",
+  },
+  design: {
+    title: "Design et systèmes de design",
+    description:
+      "Je travaille dans Figma, de la basse fidélité jusqu'aux spécifications de production, et je bâtis des systèmes de design que les développeurs adoptent réellement : composants, tokens et lignes directrices documentées. Je conçois surtout des interfaces denses et complexes, où l'accessibilité et la logique d'affaires contraignent chaque écran.",
+  },
+  strategy: {
+    title: "Stratégie et conseil",
+    description:
+      "J'apporte une perspective plus large que la liste de tâches quotidienne, ce qui m'a permis d'accompagner directement des dirigeants et des partenaires. Ayant cofondé une entreprise et participé à en bâtir une autre, j'ai appris à définir la portée en fonction des contraintes réelles plutôt qu'idéales.",
+  },
   frontend: {
-    title: "Expertise Frontend",
+    title: "Frontend et outillage IA",
     description:
-      "Au fil des années, j'ai développé une solide expertise en développement Frontend, maîtrisant des technologies modernes telles que Next.js, React, TypeScript, SASS et Storybook. Évoluant dans des startups aux responsabilités polyvalentes, j'ai également appris à collaborer efficacement et à contribuer côté backend.",
-  },
-  project_management: {
-    title: "Gestion de projet",
-    description:
-      "Je définis des objectifs alignés sur la vision de l'entreprise et je dirige les équipes techniques pour les atteindre. Je coordonne les efforts, facilite la communication et fais avancer les projets, avec une expérience de gestion allant jusqu'à 20 collaborateurs répartis sur plusieurs équipes, dans un environnement startup dynamique.",
-  },
-  digital_strategy: {
-    title: "Stratégie numérique",
-    description:
-      "J'aborde chaque rôle avec sérieux et une vision qui dépasse les tâches quotidiennes, ce qui m'a permis d'accompagner efficacement des dirigeants et des partenaires. Cette compétence, appréciée de mes collègues, est également une source d'épanouissement personnel.",
-  },
-  ux: {
-    title: "UI / UX",
-    description:
-      "J'ai une solide expérience dans la création de maquettes low et high fidelity sur Figma, permettant de matérialiser rapidement des idées et de faciliter la collaboration avec les équipes de développement. Je conçois des expériences utilisateurs efficaces en trouvant le juste équilibre entre contraintes techniques, délais et qualité UX.",
+      "J'écris du code frontend de production en Next.js, React et TypeScript. Je peux donc prototyper une idée, remettre en question une estimation de faisabilité et remettre aux développeurs quelque chose de constructible. La majorité de ce travail passe maintenant par des workflows assistés par IA et agentiques, incluant l'outillage interne que je me construis.",
   },
 };
 
