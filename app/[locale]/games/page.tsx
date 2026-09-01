@@ -5,13 +5,14 @@ import { H1 } from "@/components/Typography";
 import i18n from "./i18n";
 
 type GamesPageProps = {
-  params: {
+  params: Promise<{
     locale: Locale;
-  };
+  }>;
 };
 export const generateMetadata = metadata;
 
-export default function GamesPage({ params }: GamesPageProps) {
+export default async function GamesPage(props: GamesPageProps) {
+  const params = await props.params;
   const { locale } = params;
   const t = i18n[locale];
   return (

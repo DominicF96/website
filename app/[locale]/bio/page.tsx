@@ -6,13 +6,14 @@ import { H1, Muted } from "@/components/Typography";
 import { BioSection } from "@/components/pages/bio/BioSection";
 
 type BioPageProps = {
-    params: {
+    params: Promise<{
         locale: Locale;
-    };
+    }>;
 };
 export const generateMetadata = metadata;
 
-export default function BioPage({ params }: BioPageProps) {
+export default async function BioPage(props: BioPageProps) {
+    const params = await props.params;
     const { locale } = params;
     return (
         <PageContainer>

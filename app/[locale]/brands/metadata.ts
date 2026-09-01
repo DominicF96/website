@@ -3,13 +3,14 @@ import { Locale, defaultLocale, locales } from "@/i18n.config";
 import * as t from "./metadata.i18n";
 import { Metadata } from "next";
 
-export default function generateMetadata({
+export default async function generateMetadata({
   params,
 }: {
-  params: { locale: Locale };
-}): Metadata {
-  const locale = locales.includes(params.locale)
-    ? params.locale
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale = locales.includes(rawLocale)
+    ? rawLocale
     : defaultLocale;
 
   return {

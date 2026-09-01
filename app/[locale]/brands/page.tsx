@@ -4,13 +4,14 @@ import metadata from "./metadata";
 import Brands from "@/components/pages/brands";
 
 type BrandsPageProps = {
-  params: {
+  params: Promise<{
     locale: Locale;
-  };
+  }>;
 };
 export const generateMetadata = metadata;
 
-export default function BrandsPage({ params }: BrandsPageProps) {
+export default async function BrandsPage(props: BrandsPageProps) {
+  const params = await props.params;
   const { locale } = params;
   return (
     <PageContainer>

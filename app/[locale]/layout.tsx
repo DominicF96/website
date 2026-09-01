@@ -4,19 +4,29 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Newsletter from "@/components/layout/Newsletter";
 import ContactForm from "@/components/layout/ContactForm";
-import { Locale } from "@/i18n.config";
+import { Locale, locales, defaultLocale } from "@/i18n.config";
 import SlidingBanner from "@/components/pages/home/SlidingBanner";
 import Glossary from "@/components/pages/home/Glossary/Glossary";
 
 type Props = {
-  params: {
-    locale: Locale;
-  };
+  // Next 16 types route params as string; narrow to Locale below.
+  params: Promise<{
+    locale: string;
+  }>;
   children: React.ReactNode;
 };
 
-function LocalizedLayout({ params, children }: Props) {
-  const { locale } = params;
+async function LocalizedLayout(props: Props) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
+  const { locale: rawLocale } = params;
+  const locale = (locales.includes(rawLocale as Locale)
+    ? rawLocale
+    : defaultLocale) as Locale;
   return (
     <div>
       <Navbar locale={locale} />

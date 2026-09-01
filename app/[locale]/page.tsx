@@ -7,13 +7,14 @@ import { SecretImage } from "@/components/pages/home/SecretImage";
 import metadata from "./metadata";
 
 type HomePageProps = {
-  params: {
+  params: Promise<{
     locale: Locale;
-  };
+  }>;
 };
 export const generateMetadata = metadata;
 
-export default function HomePage({ params }: HomePageProps) {
+export default async function HomePage(props: HomePageProps) {
+  const params = await props.params;
   const { locale } = params;
 
   return (

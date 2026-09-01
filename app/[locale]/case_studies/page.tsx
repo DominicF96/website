@@ -4,13 +4,14 @@ import { PageContainer } from "@/components/Container";
 import metadata from "./metadata";
 
 type WebPageProps = {
-    params: {
+    params: Promise<{
         locale: Locale;
-    };
+    }>;
 };
 export const generateMetadata = metadata;
 
-export default function CaseStudiesPage({ params }: WebPageProps) {
+export default async function CaseStudiesPage(props: WebPageProps) {
+    const params = await props.params;
     const { locale } = params;
     return (
         <PageContainer>
