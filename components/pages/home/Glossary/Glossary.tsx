@@ -17,6 +17,23 @@ const BLEED_VW = 130;
 const sizeRem = (score: number) => 0.9 + 1.5 * score * score;
 const opacityOf = (score: number) => 0.3 + 0.7 * score * score;
 
+// Deterministic displacement. Seeded from the term itself so the server and
+// the client always produce the same offsets: Math.random() here would be a
+// guaranteed hydration mismatch. Applied as a transform rather than a margin,
+// so terms shift visually without disturbing the flex flow around them.
+const hash = (input: string) => {
+  let h = 2166136261;
+  for (let i = 0; i < input.length; i++) {
+    h ^= input.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+};
+
+// Three uncorrelated values per term, each in [-1, 1].
+const noise = (name: string, salt: number) =>
+  ((hash(name + ":" + salt) % 2000) / 1000) - 1;
+
 function Glossary({}: Props) {
   // No sorting. Source order is category order (product, design, AI,
   // leadership, tech), so related terms cluster together instead of being
@@ -27,7 +44,7 @@ function Glossary({}: Props) {
       style={{ marginLeft: "calc(50% - 50vw)" }}
     >
       <div
-        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-7 sm:gap-y-2 mix-blend-multiply text-muted-foreground leading-[1.05]"
+        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-4 sm:gap-x-7 sm:gap-y-5 mix-blend-multiply text-muted-foreground leading-[1.05]"
         style={{
           width: `${BLEED_VW}vw`,
           marginLeft: `${(100 - BLEED_VW) / 2}vw`,
@@ -35,6 +52,9 @@ function Glossary({}: Props) {
       >
         {GLOSSARY.map((keyword) => {
           const rem = sizeRem(keyword.score);
+          const dy = noise(keyword.name, 1) * 14;
+          const dx = noise(keyword.name, 2) * 8;
+          const rot = noise(keyword.name, 3) * 1.6;
           return (
             <div
               key={`keyword_${keyword.name}`}
@@ -47,6 +67,9 @@ function Glossary({}: Props) {
                 fontSize: `clamp(${(rem * 0.62).toFixed(2)}rem, ${(
                   rem * 2.9
                 ).toFixed(2)}vw, ${rem.toFixed(2)}rem)`,
+                transform: `translate(${dx.toFixed(1)}px, ${dy.toFixed(
+                  1
+                )}px) rotate(${rot.toFixed(2)}deg)`,
               }}
             >
               {keyword.name.toLocaleUpperCase()}
