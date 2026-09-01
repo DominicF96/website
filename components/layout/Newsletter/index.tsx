@@ -77,18 +77,33 @@ function Newsletter({ locale }: Props) {
       const wrapperTop = wrapper.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      // Single progress value: 0 while the card is still below the fold, 1 once
-      // its wrapper has reached the top of the viewport. Clamping here means no
-      // branch is needed for the off-screen case.
-      const progress = Math.min(Math.max(1 - wrapperTop / windowHeight, 0), 1);
+      // The card is translated upward, so it becomes visible well before its
+      // wrapper enters the viewport. Progress therefore starts counting from
+      // the moment the CARD would appear, not the wrapper: otherwise it sits
+      // frozen on screen for the whole length of that offset.
+      const START_Y = -400; // where the card sits as it first appears
+      const PEAK_Y = -700; // highest point, riding over the glossary
+      const END_Y = -150; // resting position, down by the contact form
 
-      // Reaches full size at ~33% of the travel, up from 50%.
-      const scale = Math.min(0.8 + 0.9 * progress, 1.1);
-      // Starts 700px high, further over the glossary, and drops 550px to land
-      // on the same -150px it always ended at.
-      const translateY = -700 + 550 * progress;
-      // Fully opaque by ~20% of the travel; it used to top out at 0.9.
-      const opacity = Math.min(0.6 + 2 * progress, 1);
+      // Fraction of the travel spent on the fast opening move.
+      const FAST = 0.25;
+
+      const start = windowHeight - START_Y; // wrapperTop at which the card appears
+      const progress = Math.min(Math.max((start - wrapperTop) / start, 0), 1);
+
+      // Size and opacity finish during the opening move, so the card is fully
+      // formed as soon as it is properly on screen.
+      const scale = Math.min(0.8 + (0.3 / FAST) * progress, 1.1);
+      const opacity = Math.min(0.6 + (0.4 / (FAST * 0.8)) * progress, 1);
+
+      // Two phases: a quick rise up over the glossary, then a long slow drag
+      // down towards the contact form.
+      let translateY: number;
+      if (progress < FAST) {
+        translateY = START_Y + (PEAK_Y - START_Y) * (progress / FAST);
+      } else {
+        translateY = PEAK_Y + (END_Y - PEAK_Y) * ((progress - FAST) / (1 - FAST));
+      }
 
       card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
       card.style.opacity = `${opacity}`;
