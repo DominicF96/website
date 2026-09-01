@@ -3,6 +3,11 @@ import React from "react";
 
 type Props = {};
 
+// The cloud is deliberately wider than the viewport so terms bleed off both
+// edges. The outer element is pinned to exactly 100vw and clips the overflow,
+// so nothing here can widen the page or introduce horizontal scrolling.
+const BLEED_VW = 112;
+
 function Glossary({}: Props) {
   // copy before sorting: GLOSSARY is a shared module import
   const sortedGlossary = [...GLOSSARY].sort((a, b) => {
@@ -15,26 +20,36 @@ function Glossary({}: Props) {
   });
 
   return (
-    <div className="flex flex-row justify-center flex-wrap gap-x-3 gap-y-1 sm:gap-x-6 sm:gap-y-2 mt-4 mix-blend-multiply max-h-[420px] sm:max-h-[560px] overflow-hidden py-1 text-muted-foreground">
-      {sortedGlossary.map((keyword) => (
-        <div
-          key={`keyword_${keyword.name}`}
-          className="inline-block text-sm"
-          style={{
-            // floor the opacity: fully transparent text reads as keyword stuffing
-            opacity: 0.4 + keyword.score * 0.4,
-            fontWeight: keyword.score >= 1 ? "bold" : "normal",
-            // clamp: le vw fait retrecir les termes sur mobile, ou une valeur
-            // fixe debordait horizontalement
-            fontSize: `clamp(${(0.65 + keyword.score * 0.1).toFixed(2)}rem, ${(
-              2.8 +
-              keyword.score * 1.0
-            ).toFixed(2)}vw, ${(1.0 + keyword.score * 0.6).toFixed(2)}rem)`,
-          }}
-        >
-          {keyword.name.toLocaleUpperCase()}
-        </div>
-      ))}
+    <div
+      className="relative w-screen max-w-[100vw] overflow-x-hidden overflow-y-hidden mt-4 py-1"
+      style={{ marginLeft: "calc(50% - 50vw)" }}
+    >
+      <div
+        className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-1 sm:gap-x-8 sm:gap-y-2 mix-blend-multiply max-h-[420px] sm:max-h-[560px] text-muted-foreground"
+        style={{
+          width: `${BLEED_VW}vw`,
+          marginLeft: `${(100 - BLEED_VW) / 2}vw`,
+        }}
+      >
+        {sortedGlossary.map((keyword) => (
+          <div
+            key={`keyword_${keyword.name}`}
+            className="inline-block whitespace-nowrap"
+            style={{
+              // floor the opacity: fully transparent text reads as keyword stuffing
+              opacity: 0.4 + keyword.score * 0.4,
+              fontWeight: keyword.score >= 1 ? "bold" : "normal",
+              // scales with viewport width, capped so it stays sane on desktop
+              fontSize: `clamp(${(0.95 + keyword.score * 0.25).toFixed(2)}rem, ${(
+                4.0 +
+                keyword.score * 1.6
+              ).toFixed(2)}vw, ${(1.15 + keyword.score * 0.55).toFixed(2)}rem)`,
+            }}
+          >
+            {keyword.name.toLocaleUpperCase()}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

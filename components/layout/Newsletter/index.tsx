@@ -86,21 +86,28 @@ function Newsletter({ locale }: Props) {
           1.1
         )}) translateY(${translateY}px)`;
         newsletterRef.current.style.opacity = `${Math.max(scale - 0.2, 0.6)}`;
-      } else {
-        console.error("Newsletter ref not found");
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Run once on mount: without this the card has no transform at all until
+    // the first scroll event, so it sits unstyled on load and on any route
+    // change that does not scroll.
+    handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   return (
     <CenteredContainer>
       <div
         ref={newsletterRef}
-        className="relative z-10 mt-56 mb-32 bg-primary text-background rounded-xl"
+        className="relative z-10 mt-56 mb-32 bg-primary text-background rounded-xl will-change-transform"
       >
         <Image
           src="/vectors/envelope.svg"
