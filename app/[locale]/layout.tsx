@@ -6,7 +6,6 @@ import Newsletter from "@/components/layout/Newsletter";
 import ContactForm from "@/components/layout/ContactForm";
 import { Locale, locales, defaultLocale } from "@/i18n.config";
 import SlidingBanner from "@/components/pages/home/SlidingBanner";
-import Glossary from "@/components/pages/home/Glossary/Glossary";
 
 type Props = {
   // Next 16 types route params as string; narrow to Locale below.
@@ -41,7 +40,6 @@ async function LocalizedLayout(props: Props) {
         />
         {children}
         <SlidingBanner locale={locale} className="-mt-[1px]" />
-        <Glossary />
         <Newsletter locale={locale} />
         <ContactForm locale={locale} />
         <Footer locale={locale} />
